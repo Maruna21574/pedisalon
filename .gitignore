@@ -1,0 +1,14 @@
+﻿# Pôvodné veľké fotky (optimalizované verzie sú v assets/img)
+/bradaciva/
+/brusenie/
+/mikoza/
+/pedikura/
+/*pona/
+/808265467_*.jpg
+
+# Osobné údaje z rezervácií a správ
+/data/*.json
+
+# Pomocné
+_t.html
+*.log
