@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/lib.php';
 $C = cfg(); $S = $C['salon'];
+// Pekné URL: odkazy na hlavné stránky bez „.php“ (/galeria namiesto /galeria.php); pravidlá sú v .htaccess
+ob_start(fn(string $html) => preg_replace(['~href="index\.php"~', '~(href|action)="(?!https?:|/|\.\.)([a-z0-9-]+)\.php(?=[?#"])~i'], ['href="./"', '$1="$2'], $html));
 $pageTitle = isset($title) ? $title . ' | ' . $S['name'] : $S['name'] . ' – ' . $S['tagline'];
 $pageDesc  = $desc ?? 'Profesionálna pedikúra, brúsenie päty, ošetrenie mykózy, bradavíc a vrastajúcich nechtov. Objednajte sa online v PediSalóne ZK.';
 $active = $active ?? '';

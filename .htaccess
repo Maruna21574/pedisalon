@@ -30,6 +30,13 @@ DirectoryIndex index.php
   # Presmerovanie /index.php na /
   RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
   RewriteRule ^index\.php$ / [R=301,L]
+  # Pekné URL: /galeria.php -> /galeria (iba hlavné stránky, nie admin/ a api/)
+  RewriteCond %{THE_REQUEST} \s/([a-z0-9-]+)\.php[\s?] [NC]
+  RewriteRule ^([a-z0-9-]+)\.php$ /$1 [R=301,L]
+  # /galeria sa interne spracuje ako galeria.php
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^([a-z0-9-]+)$ $1.php [L]
 </IfModule>
 
 # Bezpečnostné hlavičky
