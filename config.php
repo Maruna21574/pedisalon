@@ -1,7 +1,8 @@
 <?php
 /**
  * PediSalón ZK – centrálna konfigurácia.
- * Tu upravíte kontakty, otváracie hodiny, služby, ceny a heslo do administrácie.
+ * Predvolené hodnoty (kontakty, hodiny, služby, ceny). Všetko je možné meniť v administrácii
+ * (/admin/) – zmeny sa ukladajú do data/settings.json a majú prednosť pred týmto súborom.
  */
 
 date_default_timezone_set('Europe/Bratislava');
@@ -14,11 +15,11 @@ return [
         'phone'     => '+421 900 000 000',
         'phone_raw' => '+421900000000',
         'email'     => 'info@pedisalon-zk.sk',      // sem chodia upozornenia o rezerváciách
-        'address'   => 'Ulica 123, 000 00 Mesto',
-        'city'      => 'Mesto',
+        'address'   => 'Nám. baníkov 2, 972 51 Handlová',
+        'city'      => 'Handlová',
         'facebook'  => 'https://www.facebook.com/',
         'instagram' => 'https://www.instagram.com/',
-        'maps_embed'=> '',   // vložte URL z Google Maps → Zdieľať → Vložiť mapu (src="...")
+        'maps_embed'=> 'https://www.google.com/maps?q=N%C3%A1m.+ban%C3%ADkov+2%2C+972+51+Handlov%C3%A1%2C+Slovakia&output=embed',   // adresu mapy zmeníte v administrácii (Nastavenia)
         'ico'       => '',   // IČO / fakturačné údaje (voliteľné, zobrazí sa v pätičke)
     ],
 
@@ -44,10 +45,9 @@ return [
     ],
 
     // ---------- Administrácia ----------
-    // Predvolené heslo: "pedisalon2025"  → ZMEŇTE HO!
-    // Nový hash vygenerujete: php -r "echo password_hash('vaseheslo', PASSWORD_DEFAULT);"
-    // alebo cez stránku /admin/ (odkaz „Vygenerovať hash“ po prihlásení).
-    'admin_password_hash' => '$2y$10$LH.ojUT1VAxXtFXeHn7uYuOLeVbeJLDGM8tGQ1oebGpqVUElwSFTe',
+    // Heslo sa mení v administrácii: /admin/ → Nastavenia → Zmena hesla (uloží sa do data/settings.json
+    // a má prednosť pred touto hodnotou). Hash pre núdzový reset: php -r "echo password_hash('heslo', PASSWORD_DEFAULT);"
+    'admin_password_hash' => '$2y$12$34tZ0NqvJJ2ACtCHMGosSOk5XCNAYwhsxnZbIymB3e29oUcK8IfZa',
 
     // ---------- Služby (ceny sú orientačné – UPRAVTE podľa cenníka) ----------
     'services' => [
@@ -57,6 +57,7 @@ return [
             'duration' => 60,
             'price'    => 25,
             'page'     => 'pedikura.php',
+            'menu'     => 'Pedikúra',
             'img'      => 'pedikura-1.jpg',
             'icon'     => 'foot',
         ],
@@ -75,6 +76,7 @@ return [
             'duration' => 45,
             'price'    => 20,
             'page'     => 'brusenie-paty.php',
+            'menu'     => 'Brúsenie päty',
             'img'      => 'brusenie-1.jpg',
             'icon'     => 'heel',
         ],
@@ -84,6 +86,7 @@ return [
             'duration' => 60,
             'price'    => 30,
             'page'     => 'mykoza.php',
+            'menu'     => 'Mykóza nechtov',
             'img'      => 'mykoza-1.jpg',
             'icon'     => 'nail',
         ],
@@ -93,6 +96,7 @@ return [
             'duration' => 45,
             'price'    => 25,
             'page'     => 'bradavice-kurie-oka.php',
+            'menu'     => 'Bradavice a kurie oká',
             'img'      => 'bradavice-2.jpg',
             'icon'     => 'dot',
         ],
@@ -102,6 +106,7 @@ return [
             'duration' => 45,
             'price'    => 30,
             'page'     => 'spona.php',
+            'menu'     => 'Špona – vrastajúci necht',
             'img'      => 'spona-1.jpg',
             'icon'     => 'brace',
         ],

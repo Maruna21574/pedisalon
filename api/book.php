@@ -68,9 +68,7 @@ $salon = $c['salon'];
 $body = "Nová rezervácia ($status)\n\nSlužba: {$svc['name']}\nTermín: $when (do $endTime)\nMeno: $name\nTelefón: $phone\nE-mail: " . ($email ?: '-') . "\nPoznámka: " . ($note ?: '-') . "\n\nSpravovať: " . (isset($_SERVER['HTTP_HOST']) ? (($_SERVER['HTTPS'] ?? '') ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . dirname(dirname($_SERVER['SCRIPT_NAME'])) . '/admin/' : '');
 send_mail($salon['email'], "Nová rezervácia – $name, $when", $body, $email);
 if ($email) {
-    $msg = "Dobrý deň $name,\n\nďakujeme za Vašu rezerváciu v salóne {$salon['name']}.\n\nSlužba: {$svc['name']}\nTermín: $when\nAdresa: {$salon['address']}\n\n"
-         . ($status === 'pending' ? "Rezerváciu Vám čoskoro potvrdíme telefonicky alebo e-mailom.\n\n" : "Rezervácia je potvrdená.\n\n")
-         . "Ak potrebujete termín zmeniť alebo zrušiť, zavolajte na {$salon['phone']}.\n\nTešíme sa na Vás!\n{$salon['name']}";
+    $msg = mail_text('mail.received', ['{client}' => $name, '{service}' => $svc['name'], '{when}' => $when, '{status}' => tx($status === 'pending' ? 'mail.status.pending' : 'mail.status.confirmed')]);
     send_mail($email, "Rezervácia – {$salon['name']}", $msg, $salon['email']);
 }
 

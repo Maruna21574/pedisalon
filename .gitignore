@@ -12,3 +12,8 @@
 # Pomocné
 _t.html
 *.log
+
+# Fotky nahrané cez administráciu (žijú len na serveri)
+/assets/img/uploads/*
+!/assets/img/uploads/.htaccess
+/assets/img/t/uploads-*

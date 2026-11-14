@@ -31,22 +31,16 @@ function icon(string $n, string $cls = 'ico'): string {
 }
 
 $nav = [
-    ['home',   'index.php',     'Domov'],
-    ['sluzby', 'sluzby.php',    'Služby'],
-    ['cennik', 'cennik.php',    'Cenník'],
-    ['galeria','galeria.php',   'Galéria'],
-    ['onas',   'o-nas.php',     'O nás'],
-    ['kontakt','kontakt.php',   'Kontakt'],
+    ['sluzby', 'sluzby.php',    tx('nav.services')],
+    ['cennik', 'cennik.php',    tx('nav.pricing')],
+    ['galeria','galeria.php',   tx('nav.gallery')],
+    ['onas',   'o-nas.php',     tx('nav.about')],
+    ['kontakt','kontakt.php',   tx('nav.contact')],
 ];
-$subnav = [];
-foreach ($C['services'] as $s) { $subnav[$s['page']] = $s['page']; }
-$serviceMenu = [
-    ['pedikura.php', 'Pedikúra'],
-    ['brusenie-paty.php', 'Brúsenie päty'],
-    ['mykoza.php', 'Mykóza nechtov'],
-    ['bradavice-kurie-oka.php', 'Bradavice a kurie oká'],
-    ['spona.php', 'Špona – vrastajúci necht'],
-];
+$serviceMenu = service_menu();   // podľa služieb nastavených v administrácii
+$brandParts = explode(' ', $S['name'], 2);
+// Položka „Služby“ je aktívna na všetkých podstránkach služieb
+$servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'onas', 'kontakt', 'rezervacia'], true);
 ?><!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -62,8 +56,10 @@ $serviceMenu = [
 <link rel="icon" href="assets/img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<!-- Písma sa načítavajú bez blokovania vykresľovania stránky -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Quicksand:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Quicksand:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/style.css?v=14">
 <script type="application/ld+json">
 <?= json_encode([
     '@context' => 'https://schema.org', '@type' => 'HealthAndBeautyBusiness',
@@ -77,29 +73,37 @@ $serviceMenu = [
 <script>document.body.classList.add('entering')</script>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.page-curtain{display:none}</style></noscript>
 <div class="page-curtain" aria-hidden="true"></div>
-<a class="skip" href="#obsah">Preskočiť na obsah</a>
+<a class="skip" href="#obsah"><?= t('skip') ?></a>
 
 <header class="site-header" id="top">
   <div class="wrap bar">
     <a class="brand" href="index.php" aria-label="<?= e($S['name']) ?> – domov">
       <img src="assets/img/logo.jpg" alt="" width="52" height="52">
-      <span class="brand-text"><b>PediSalón</b> <i>ZK</i></span>
+      <span class="brand-text"><b><?= e($brandParts[0]) ?></b><?php if (isset($brandParts[1])): ?> <i><?= e($brandParts[1]) ?></i><?php endif; ?></span>
     </a>
     <nav class="main-nav" id="mainNav" aria-label="Hlavná navigácia">
       <?php foreach ($nav as [$key, $href, $label]): ?>
         <?php if ($key === 'sluzby'): ?>
-          <div class="has-sub <?= in_array($active, ['sluzby','pedikura','brusenie','mykoza','bradavice','spona']) ? 'active' : '' ?>">
-            <a href="<?= $href ?>"><?= $label ?> <svg viewBox="0 0 10 6" class="chev" aria-hidden="true"><path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="has-sub <?= ($active === 'sluzby' || $servicesActive) ? 'active' : '' ?>">
+            <a href="<?= $href ?>"><?= e($label) ?> <svg viewBox="0 0 10 6" class="chev" aria-hidden="true"><path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
             <div class="sub">
-              <?php foreach ($serviceMenu as [$h, $l]): ?><a href="<?= $h ?>"><?= $l ?></a><?php endforeach; ?>
-              <a href="sluzby.php" class="all">Všetky služby →</a>
+              <?php foreach ($serviceMenu as [$h, $l]): ?><a href="<?= e($h) ?>"><?= e($l) ?></a><?php endforeach; ?>
+              <a href="sluzby.php" class="all"><?= t('nav.allservices') ?></a>
+            </div>
+          </div>
+        <?php elseif ($key === 'onas'): ?>
+          <div class="has-sub <?= $active === 'onas' ? 'active' : '' ?>">
+            <a href="<?= $href ?>"><?= e($label) ?> <svg viewBox="0 0 10 6" class="chev" aria-hidden="true"><path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+            <div class="sub">
+              <a href="o-nas.php"><?= t('nav.about.sub') ?></a>
+              <a href="prevadzka.php"><?= t('nav.premises') ?></a>
             </div>
           </div>
         <?php else: ?>
-          <a href="<?= $href ?>" class="<?= $active === $key ? 'active' : '' ?>"><?= $label ?></a>
+          <a href="<?= $href ?>" class="<?= $active === $key ? "active" : "" ?>"><?= e($label) ?></a>
         <?php endif; ?>
       <?php endforeach; ?>
-      <a href="rezervacia.php" class="btn btn-sm nav-cta">Rezervovať termín</a>
+      <a href="rezervacia.php" class="btn btn-sm nav-cta"><?= t('nav.book') ?></a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
   </div>

@@ -38,10 +38,10 @@
   function summary() {
     const s = st.service && cfg.services[st.service];
     const set = (id, txt, empty) => { const el = $(id); el.textContent = txt; el.classList.toggle('empty', !!empty); };
-    set('#sumSvc', s ? s.name : 'Zatiaľ nevybraté', !s);
+    set('#sumSvc', s ? s.name : cfg.texts.unset, !s);
     set('#sumDur', s ? s.duration + ' minút' : '–', !s);
     $('#sumPrice').textContent = s ? money(s.price) : '–';
-    set('#sumWhen', st.date ? nice(st.date) + (st.time ? ' o ' + st.time : '') : 'Zatiaľ nevybraté', !st.date);
+    set('#sumWhen', st.date ? nice(st.date) + (st.time ? ' o ' + st.time : '') : cfg.texts.unset, !st.date);
   }
 
   /* ---- 1: služba ---- */
@@ -153,9 +153,9 @@
   });
 
   function done(j) {
-    $('#doneText').textContent = j.status === 'confirmed' ? 'Váš termín je potvrdený.' : 'Váš termín sme zaevidovali. Čoskoro vám ho potvrdíme telefonicky alebo e-mailom.';
+    $('#doneText').textContent = j.status === 'confirmed' ? cfg.texts.confirmed : cfg.texts.pending;
     $('#doneBox').innerHTML = '<b>' + j.service + '</b><br>' + j.when + ' (do ' + j.end + ')<br>' + form.elements.name.value;
-    $('#doneNote').textContent = 'V prípade zmeny nás prosím kontaktujte na ' + cfg.phone + '.';
+    $('#doneNote').textContent = cfg.texts.note.replace('{phone}', cfg.phone);
     go('done');
     confetti();
   }

@@ -16,7 +16,8 @@
       el.style.transform = 'translateY(' + ((r.top - innerHeight / 2) * parseFloat(el.dataset.parallax)) + 'px)';
     });
   }
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  let tick = false;
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { tick = false; onScroll(); }); } }, { passive: true }); onScroll();
 
   /* Mobilné menu */
   const burger = $('#burger'), nav = $('#mainNav');
@@ -149,7 +150,7 @@
       if (/^(mailto|tel):/.test(a.getAttribute('href')) || a.hasAttribute('download') || a.hasAttribute('data-lightbox')) return;
       e.preventDefault();
       $('.page-curtain').classList.add('in');
-      setTimeout(() => { location.href = a.href; }, 450);
+      setTimeout(() => { location.href = a.href; }, 220);
     });
   }
 
@@ -165,7 +166,7 @@
       const r = await fetch('api/contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       const j = await r.json();
       msg.className = 'alert ' + (j.ok ? 'ok' : 'bad');
-      msg.textContent = j.ok ? 'Ďakujeme, správu sme prijali. Ozveme sa vám čo najskôr.' : (j.error || 'Správu sa nepodarilo odoslať.');
+      msg.textContent = j.ok ? (cf.dataset.ok || 'Ďakujeme, správu sme prijali.') : (j.error || 'Správu sa nepodarilo odoslať.');
       if (j.ok) cf.reset();
     } catch (err) { msg.className = 'alert bad'; msg.textContent = 'Chyba spojenia. Skúste to prosím znova.'; }
     btn.disabled = false;

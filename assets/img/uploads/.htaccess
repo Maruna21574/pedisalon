@@ -1,0 +1,10 @@
+# Nahrané fotky: nikdy nespúšťať skripty
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+RemoveHandler .php .phtml .php3 .php5 .php7 .phar
+RemoveType .php .phtml .php3 .php5 .php7 .phar
+<FilesMatch "\.(php|phtml|phar|php[0-9])$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
