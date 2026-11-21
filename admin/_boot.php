@@ -43,7 +43,7 @@ if (empty($_SESSION['ok'])) {
 <title>Administrácia | <?= e($C['salon']['name']) ?></title>
 <link rel="stylesheet" href="../assets/css/style.css?v=14"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet"></head>
 <body class="admin-body"><form method="post" class="login-box">
-<img src="../assets/img/logo.jpg" alt=""><h1 style="font-size:2rem">Administrácia</h1>
+<img src="../assets/img/logo.png" alt=""><h1 style="font-size:2rem">Administrácia</h1>
 <?php if ($err): ?><div class="alert bad"><?= e($err) ?></div><?php endif; ?>
 <div class="field" style="text-align:left"><label for="pw">Heslo</label><input id="pw" type="password" name="password" autofocus required></div>
 <button class="btn" style="width:100%">Prihlásiť sa</button></form></body></html><?php

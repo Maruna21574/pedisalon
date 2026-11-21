@@ -70,7 +70,7 @@ Tešíme sa na Vás!
     'home.lead'     => ['Úvodný odsek', 'V **{name}** sa o vaše chodidlá postaráme šetrne a profesionálne – od klasickej pedikúry cez brúsenie päty až po ošetrenie mykózy, kurích očí či vrastajúceho nechta.', 'area'],
     'home.btn.services' => ['Druhé tlačidlo', 'Naše služby', 'text'],
     'home.badges'   => ['Tri odznaky pod tlačidlami (jeden riadok = jeden odznak)', "Dôraz na hygienu\nIndividuálny prístup\nOnline rezervácia 24/7", 'lines'],
-    'home.hero.img' => ['Fotka v úvodnom oválnom okne', 'pedikura-1.jpg', 'image'],
+    'home.hero.img' => ['Fotka v úvodnom oválnom okne', 'hero-detail.jpg', 'image'],
     'home.chip1'    => ['Bublina 1 pri fotke', 'Rezervácia online 24/7', 'text'],
     'home.chip2'    => ['Bublina 2 pri fotke', 'Šetrné ošetrenie', 'text'],
     'home.marquee'  => ['Bežiaci pás so službami (jeden riadok = jedna položka)', "Pedikúra\nBrúsenie päty\nOšetrenie mykózy\nKurie oká a bradavice\nŠpona na vrastajúci necht\nGél lak", 'lines'],

@@ -23,7 +23,7 @@
   // Slabšie zariadenia dostanú menej lupienkov
   const weak = (navigator.hardwareConcurrency || 4) <= 2 || (navigator.deviceMemory || 4) <= 2;
   const N = weak ? 6 : (innerWidth < 700 ? 9 : 16);
-  const cols = ['#f4a3b0', '#ee93a1', '#f9ccd2', '#98b496', '#bcd0ba', '#e3708a'];
+  const cols = ['#82b0d8', '#6fb0e3', '#c7e0f5', '#f3ead6', '#b5d1e9', '#3d93d6'];
   const petal = new Path2D();
   petal.moveTo(0, 0);
   petal.bezierCurveTo(0.55, 0.25, 0.6, 0.9, 0, 1.3);

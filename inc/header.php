@@ -50,12 +50,12 @@ $servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'onas', '
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($pageTitle) ?></title>
 <meta name="description" content="<?= e($pageDesc) ?>">
-<meta name="theme-color" content="#cbd9c9">
+<meta name="theme-color" content="#d4e5f3">
 <meta property="og:title" content="<?= e($pageTitle) ?>">
 <meta property="og:description" content="<?= e($pageDesc) ?>">
-<meta property="og:image" content="assets/img/logo.jpg">
+<meta property="og:image" content="assets/img/logo-square.png">
 <meta property="og:type" content="website">
-<link rel="icon" href="assets/img/logo.jpg">
+<link rel="icon" href="assets/img/logo-square.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Písma sa načítavajú bez blokovania vykresľovania stránky -->
@@ -67,7 +67,7 @@ $servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'onas', '
     '@context' => 'https://schema.org', '@type' => 'HealthAndBeautyBusiness',
     'name' => $S['name'], 'telephone' => $S['phone'], 'email' => $S['email'],
     'address' => ['@type' => 'PostalAddress', 'streetAddress' => $S['address']],
-    'image' => 'assets/img/logo.jpg',
+    'image' => 'assets/img/logo-square.png',
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>
 </script>
 </head>
@@ -80,8 +80,7 @@ $servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'onas', '
 <header class="site-header" id="top">
   <div class="wrap bar">
     <a class="brand" href="index.php" aria-label="<?= e($S['name']) ?> – domov">
-      <img src="assets/img/logo.jpg" alt="" width="52" height="52">
-      <span class="brand-text"><b><?= e($brandParts[0]) ?></b><?php if (isset($brandParts[1])): ?> <i><?= e($brandParts[1]) ?></i><?php endif; ?></span>
+      <img src="assets/img/logo.png" alt="<?= e($S['name']) ?>" width="150" height="84">
     </a>
     <nav class="main-nav" id="mainNav" aria-label="Hlavná navigácia">
       <?php foreach ($nav as [$key, $href, $label]): ?>

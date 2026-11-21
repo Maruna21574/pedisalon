@@ -194,7 +194,7 @@ function media_list(): array {
     foreach (['' => __DIR__ . '/../assets/img', 'uploads/' => UPLOAD_DIR] as $prefix => $dir) {
         foreach (glob($dir . '/*.{jpg,jpeg,png,webp}', GLOB_BRACE) ?: [] as $f) {
             $n = basename($f);
-            if ($prefix === '' && $n === 'logo.jpg') continue;
+            if ($prefix === '' && in_array($n, ['logo.png', 'logo-square.png', 'logo.jpg'], true)) continue;
             $out[] = $prefix . $n;
         }
     }

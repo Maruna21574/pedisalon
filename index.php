@@ -26,10 +26,9 @@ require __DIR__ . '/inc/header.php';
         <div class="oval" style="--z:40px"><img src="<?= e(timg('home.hero.img')) ?>" alt="Upravené nohy po pedikúre"></div>
         <div class="medal" style="--z:110px">
           <svg viewBox="0 0 200 200" class="ring-text" aria-hidden="true"><defs><path id="circ" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs><text><textPath href="#circ"><?= e($S['name']) ?> ✿ pedikúra ✿ starostlivosť ✿ </textPath></text></svg>
-          <img src="assets/img/logo.jpg" alt="Logo <?= e($S['name']) ?>">
+          <img src="assets/img/logo.png" alt="Logo <?= e($S['name']) ?>">
         </div>
         <div class="chip c1" style="--z:130px"><?= icon('clock') ?> <?= t('home.chip1') ?></div>
-        <div class="chip c2" style="--z:100px"><?= icon('heart') ?> <?= t('home.chip2') ?></div>
       </div>
     </div>
   </div>

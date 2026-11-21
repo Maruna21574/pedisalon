@@ -13,7 +13,7 @@
 <footer class="site-footer">
   <div class="wrap grid">
     <div class="f-brand">
-      <img src="assets/img/logo.jpg" alt="Logo <?= e($S['name']) ?>" width="120" height="120" loading="lazy" decoding="async">
+      <img src="assets/img/logo.png" alt="Logo <?= e($S['name']) ?>" width="220" height="123" loading="lazy" decoding="async">
       <p><?= e($S['tagline']) ?>. <?= t('footer.about') ?></p>
       <div class="social">
         <a href="<?= e($S['facebook']) ?>" target="_blank" rel="noopener" aria-label="Facebook"><?= icon('fb') ?></a>

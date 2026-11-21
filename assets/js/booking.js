@@ -161,7 +161,7 @@
   }
   function confetti() {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const colors = ['#f4a3b0', '#e3708a', '#98b496', '#d3e1d1', '#c93f66'];
+    const colors = ['#82b0d8', '#3d93d6', '#f3ead6', '#d4e5f3', '#1f78bd'];
     for (let i = 0; i < 70; i++) {
       const c = document.createElement('i'); c.className = 'confetti';
       c.style.left = Math.random() * 100 + 'vw'; c.style.background = colors[i % colors.length];
