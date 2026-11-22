@@ -16,7 +16,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) json_out(['error' => 'Zadajte pl
 if (mb_strlen($msg) < 5 || mb_strlen($msg) > 3000) json_out(['error' => 'Napíšte správu.'], 422);
 if (empty($in['consent'])) json_out(['error' => 'Potvrďte súhlas so spracovaním údajov.'], 422);
 
-$ok = send_mail(cfg()['salon']['email'], "Správa z webu od $name", "Meno: $name\nE-mail: $email\nTelefón: " . ($phone ?: '-') . "\n\n$msg", $email);
+$ok = send_admin_contact_mail($name, $email, $phone, $msg);
 if (!$ok) {
     // Záloha: uložiť, ak mail() na hostingu zlyhá
     store_mutate(DATA_DIR . '/messages.json', function (array $all) use ($name, $email, $phone, $msg) {

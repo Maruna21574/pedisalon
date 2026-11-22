@@ -773,3 +773,7 @@ section{position:relative}
 .cookie-table th,.cookie-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--sage-200);vertical-align:top}
 .cookie-table th{background:var(--sage-50);color:var(--sage-900)}
 .table-wrap{overflow-x:auto}
+/* Lišta cookies – vľavo dole */
+.cookie-bar{left:16px;right:auto;bottom:16px;margin-inline:0;width:min(420px,calc(100vw - 32px));max-width:420px;padding:18px 20px}
+.cookie-bar p{font-size:.88rem}
+@media (max-width:560px){.cookie-bar{width:auto;right:12px;left:12px;bottom:12px}}

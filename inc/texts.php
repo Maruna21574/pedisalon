@@ -42,23 +42,24 @@ return [
   ],
   'E-maily zákazníkom' => [
     'mail.confirmed' => ['E-mail po potvrdení rezervácie. Značky: {client} meno, {service} služba, {when} termín, {name}, {phone}', "Dobrý deň {client},\n\nVaša rezervácia ({service}, {when}) je potvrdená. Tešíme sa na Vás!\n\n{name}", 'rich'],
-    'mail.received' => ['E-mail hneď po odoslaní rezervácie. Značky: {client}, {service}, {when}, {address}, {phone}, {name}, {status}', "Dobrý deň {client},
-
-ďakujeme za Vašu rezerváciu v salóne {name}.
-
-Služba: {service}
-Termín: {when}
-Adresa: {address}
-
-{status}
-
-Ak potrebujete termín zmeniť alebo zrušiť, zavolajte na {phone}.
-
-Tešíme sa na Vás!
-{name}", 'rich'],
+    'mail.received' => ['E-mail hneď po odoslaní rezervácie (úvodný text; kartu s termínom a tlačidlo doplní systém). Značky: {client}, {service}, {when}, {address}, {phone}, {name}, {status}', "Dobrý deň {client},\n\nďakujeme za Vašu rezerváciu v salóne {name}.\n\n{status}\n\nAk potrebujete termín zmeniť alebo zrušiť, zavolajte na {phone}.\n\nTešíme sa na Vás!", 'rich'],
+    'mail.reminder' => ['E-mail s pripomienkou termínu (deň vopred; zapína sa v Nastaveniach). Značky ako vyššie', "Dobrý deň {client},\n\nPripomíname Váš zajtrajší termín v salóne {name}.\n\nAk sa Vám termín nehodí, prosíme, zavolajte nám na {phone}.\n\nTešíme sa na Vás!", 'rich'],
+    'mail.subject.received' => ['Predmet e-mailu po odoslaní rezervácie', 'Rezervácia prijatá – {name}', 'text'],
+    'mail.subject.confirmed' => ['Predmet e-mailu po potvrdení rezervácie', 'Rezervácia potvrdená – {name}', 'text'],
+    'mail.subject.cancelled' => ['Predmet e-mailu po zrušení rezervácie', 'Rezervácia zrušená – {name}', 'text'],
+    'mail.subject.reminder' => ['Predmet pripomienky termínu', 'Pripomienka termínu – {name}', 'text'],
+    'mail.cta.call' => ['Tlačidlo v e-maile – zavolať (za text sa pridá číslo)', 'Zavolať', 'text'],
+    'mail.cta.web' => ['Tlačidlo v e-maile po zrušení – nový termín', 'Objednať nový termín', 'text'],
+    'mail.footer' => ['Drobný text v päte každého e-mailu', 'Táto správa bola odoslaná automaticky z webu salónu.', 'text'],
     'mail.status.pending' => ['{status} v e-maile – rezervácia čaká na potvrdenie', 'Rezerváciu Vám čoskoro potvrdíme telefonicky alebo e-mailom.', 'text'],
     'mail.status.confirmed' => ['{status} v e-maile – rezervácia je rovno potvrdená', 'Rezervácia je potvrdená.', 'text'],
     'mail.cancelled' => ['E-mail po zrušení rezervácie (rovnaké značky)', "Dobrý deň {client},\n\nVaša rezervácia ({service}, {when}) bola zrušená. Ak si želáte nový termín, objednajte sa na webe alebo nám zavolajte na {phone}.\n\n{name}", 'rich'],
+  ],
+  'E-maily pre majiteľku' => [
+    'mail.admin.new.subject' => ['Predmet e-mailu o novej rezervácii. Značky: {client}, {service}, {when}, {status}', 'Nová rezervácia – {client}, {when}', 'text'],
+    'mail.admin.new.intro' => ['Úvod e-mailu o novej rezervácii', 'Cez web prišla nová rezervácia ({status}).', 'text'],
+    'mail.admin.contact.subject' => ['Predmet e-mailu zo správy z kontaktného formulára. Značka: {client}', 'Správa z webu od {client}', 'text'],
+    'mail.admin.contact.intro' => ['Úvod e-mailu zo správy z kontaktného formulára', 'Cez kontaktný formulár na webe prišla nová správa.', 'text'],
   ],
 ],
 
@@ -130,8 +131,41 @@ Tešíme sa na Vás!
     'about.values.title'  => ['Nadpis', 'Na čom si zakladáme', 'text'],
     'about.values'     => ['Hodnoty (jeden riadok = „Nadpis | text“)', "Hygiena | Čisté pomôcky, upratané prostredie a prísne postupy pri každom klientovi.\nEmpatia | Chápeme, že niektoré problémy sú citlivé. U nás sa nemusíte hanbiť.\nŠetrnosť | Jemné postupy a kvalitná kozmetika, ktoré vaše nohy nepodráždia.\nPrecíznosť | Ku každému ošetreniu pristupujeme s pozornosťou k detailom.", 'pairs'],
   ],
+  'Hygiena a bezpečnosť' => [
+    'about.hyg.kicker' => ['Malý nadpis', 'Hygiena a bezpečnosť', 'text'],
+    'about.hyg.title'  => ['Nadpis', 'Čisté pracovisko a odborný postup', 'text'],
+    'about.hyg.text'   => ['Text', 'Každé ošetrenie začíname dezinfekciou. Pomôcky po každom klientovi čistíme a dezinfikujeme a pracovisko máme upratané a pripravené pre ďalšieho klienta.', 'area'],
+    'about.hyg.ticks'  => ['Odrážky (jeden riadok = jedna odrážka)', "Dezinfekcia pri každom ošetrení\nČisté a dezinfikované pomôcky pre každého klienta\nOdborné vzdelanie a pravidelné školenia – certifikáty nájdete nižšie", 'lines'],
+    'about.hyg.img'    => ['Fotka pri texte', 'salon-sterilizacia.jpg', 'image'],
+  ],
+  'Certifikáty (nadpisy)' => [
+    'about.cert.kicker' => ['Malý nadpis', 'Odbornosť', 'text'],
+    'about.cert.title'  => ['Nadpis', 'Certifikáty a odborné školenia', 'text'],
+    'about.cert.text'   => ['Text pod nadpisom (samotné certifikáty pridáte v sekcii Certifikáty)', 'O vaše nohy sa staráme s odbornými znalosťami. Sústavne sa vzdelávame a absolvované kurzy a školenia nájdete nižšie. Kliknutím si certifikát zväčšíte.', 'area'],
+  ],
 ],
 
+'Poradňa' => [
+  'Hlavička a úvod' => [
+    'poradna.hero.title' => ['Nadpis stránky', 'Poradňa', 'text'],
+    'poradna.hero.lead'  => ['Podtitulok', 'Najčastejšie ťažkosti chodidiel jednoducho a zrozumiteľne – čo ich spôsobuje, ako sa prejavujú a čo pomáha.', 'text'],
+    'poradna.intro'      => ['Úvodný odsek', 'Zdravé chodidlá sú základ pohody pri každom kroku. Mnohé problémy sa dajú riešiť jednoducho, ak ich spoznáte včas. Nižšie nájdete prehľad najčastejších ťažkostí – od vrastajúceho nechta až po popraskané päty.', 'area'],
+    'poradna.note'       => ['Upozornenie pod úvodom', 'Text má informatívny charakter a nenahrádza lekársku diagnostiku ani liečbu. Pedikúra je kozmetické ošetrenie. Pri podozrení na ochorenie, zápal, hnisanie alebo ak máte cukrovku či poruchy prekrvenia, vždy sa poraďte s lekárom.', 'area'],
+    'poradna.h.causes'   => ['Nadpis stĺpca – príčiny', 'Čo to spôsobuje', 'text'],
+    'poradna.h.signs'    => ['Nadpis stĺpca – príznaky', 'Ako sa to prejavuje', 'text'],
+    'poradna.h.help'     => ['Nadpis – čo pomáha', 'Čo pomáha', 'text'],
+  ],
+  'Prevencia' => [
+    'poradna.prev.kicker' => ['Malý nadpis', 'Prevencia', 'text'],
+    'poradna.prev.title'  => ['Nadpis', 'Ako sa starať o nohy doma', 'text'],
+    'poradna.prev.items'  => ['Rady (jeden riadok = „Nadpis | text“, max. 4)', "Správna obuv | Dostatočne priestranná, z prírodných materiálov. Obuv pravidelne striedajte a nechajte ju vyschnúť.\nHydratácia | Po umytí nohy poriadne osušte, najmä medzi prstami, a každý deň ich natrite vhodným krémom.\nSprávne strihanie | Nechty strihajte rovno, nie do oblúka, a nie príliš nakrátko. Rohy nechajte nezarezané.\nHygiena | Na verejných miestach nechoďte naboso, používajte vlastné uteráky a obuv a meňte ponožky.", 'pairs'],
+  ],
+  'Kedy ísť k lekárovi' => [
+    'poradna.doc.kicker' => ['Malý nadpis', 'Bezpečnosť', 'text'],
+    'poradna.doc.title'  => ['Nadpis', 'Kedy ísť k lekárovi', 'text'],
+    'poradna.doc.items'  => ['Situácie (jeden riadok = „Situácia | vysvetlenie“)', "Hnisanie, silné začervenanie alebo opuch | Ide o príznaky zápalu. Ošetrenie v salóne nie je vhodné – vyhľadajte lekára.\nCukrovka, poruchy prekrvenia alebo neuropatia | Pri diabetickom chodidle a zníženom prekrvení môže aj drobná ranka viesť ku komplikáciám. Bežné ošetrenie konzultujte s lekárom.\nRana, ktorá sa nehojí, alebo nezvyčajná zmena kože | Nehojaca sa rana, tmavá škvrna alebo zmena materského znamienka patrí na vyšetrenie k lekárovi.\nPlesňová infekcia, ktorá sa vracia | Ak sa mykóza opakuje, je potrebná odborná liečba. Pedikúra ju sama nevylieči, ale vie ošetriť nechty a pomôcť s prevenciou.", 'pairs'],
+  ],
+],
 'Prevádzka' => [
   'Hlavička' => [
     'premises.hero.title' => ['Nadpis stránky', 'Naša prevádzka', 'text'],

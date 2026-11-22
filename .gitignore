@@ -23,3 +23,7 @@ _t.html
 /assets/img/fotky/
 /assets/img/certifikaty/*.png
 /assets/img/certifikaty/9160*.jpg
+
+# Pomocné značky údržby
+/data/.purged
+/data/.reminded

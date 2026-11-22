@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'min_lead_hours' => max(0, min(720, (int)($b['min_lead_hours'] ?? 3))),
             'max_days_ahead' => max(1, min(365, (int)($b['max_days_ahead'] ?? 60))),
             'auto_confirm'   => !empty($b['auto_confirm']),
+            'reminders'      => !empty($b['reminders']),
             'buffer_min'     => max(0, min(120, (int)($b['buffer_min'] ?? 10))),
         ];
         settings_update(function (array $s) use ($booking) { $s['booking'] = $booking; return $s; });
@@ -115,6 +116,7 @@ admin_head('Nastavenia', 'nastavenia');
       <div class="field"><label>Na koľko dní dopredu sa dá rezervovať</label><input type="number" name="booking[max_days_ahead]" value="<?= (int)$B['max_days_ahead'] ?>" min="1" max="365"></div>
     </div>
     <label class="check"><input type="checkbox" name="booking[auto_confirm]" value="1" <?= $B['auto_confirm'] ? 'checked' : '' ?>> <span>Rezervácie potvrdzovať automaticky (inak čakajú na vaše potvrdenie)</span></label>
+    <label class="check"><input type="checkbox" name="booking[reminders]" value="1" <?= !empty($B['reminders']) ? 'checked' : '' ?>> <span>Poslať klientovi pripomienku termínu deň vopred (len potvrdené rezervácie, ak klient uviedol e-mail)</span></label>
     <button class="btn btn-sm">Uložiť nastavenia rezervácií</button>
   </form>
 </div>

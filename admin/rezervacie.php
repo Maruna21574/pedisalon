@@ -15,9 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($a !== 'pending') {
             // Informuj klienta e-mailom
             foreach (store_read(BOOKINGS_FILE) as $b) if ($b['id'] === $id && !empty($b['email'])) {
-                $when = sk_date($b['date']) . ' o ' . $b['start'];
-                $txt = mail_text($a === 'confirmed' ? 'mail.confirmed' : 'mail.cancelled', ['{client}' => $b['name'], '{service}' => $b['service_name'], '{when}' => $when]);
-                send_mail($b['email'], 'Rezervácia – ' . ($a === 'confirmed' ? 'potvrdenie' : 'zrušenie'), $txt, $C['salon']['email']);
+                send_client_mail($a === 'confirmed' ? 'confirmed' : 'cancelled', $b);
             }
         }
         $msg = 'Rezervácia aktualizovaná.';

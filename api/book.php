@@ -62,15 +62,12 @@ $result = store_mutate(BOOKINGS_FILE, function (array $all) use ($date, $time, $
 if ($result === 'limit') json_out(['error' => 'Na toto telefónne číslo už existuje viac aktívnych rezervácií. Zavolajte nám prosím.'], 429);
 if ($result !== true) json_out(['error' => 'Tento termín už bol medzitým obsadený. Vyberte prosím iný čas.', 'conflict' => true], 409);
 
-// Notifikácie
+// Notifikácie (HTML e-maily: majiteľke aj klientovi)
 $when = sk_date($date) . ' o ' . $time;
 $endTime = min_to_hm(hm_to_min($time) + (int)$svc['duration']);
-$salon = $c['salon'];
-$body = "Nová rezervácia ($status)\n\nSlužba: {$svc['name']}\nTermín: $when (do $endTime)\nMeno: $name\nTelefón: $phone\nE-mail: " . ($email ?: '-') . "\nPoznámka: " . ($note ?: '-') . "\n\nSpravovať: " . (isset($_SERVER['HTTP_HOST']) ? (($_SERVER['HTTPS'] ?? '') ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . dirname(dirname($_SERVER['SCRIPT_NAME'])) . '/admin/' : '');
-send_mail($salon['email'], "Nová rezervácia – $name, $when", $body, $email);
-if ($email) {
-    $msg = mail_text('mail.received', ['{client}' => $name, '{service}' => $svc['name'], '{when}' => $when, '{status}' => tx($status === 'pending' ? 'mail.status.pending' : 'mail.status.confirmed')]);
-    send_mail($email, "Rezervácia – {$salon['name']}", $msg, $salon['email']);
-}
+$bk = ['id' => $id, 'service_name' => $svc['name'], 'duration' => (int)$svc['duration'], 'price' => $svc['price'], 'date' => $date, 'start' => $time,
+       'name' => $name, 'phone' => $phone, 'email' => $email, 'note' => $note, 'status' => $status];
+send_admin_booking_mail($bk);
+if ($email) send_client_mail('received', $bk);
 
 json_out(['ok' => true, 'status' => $status, 'when' => $when, 'service' => $svc['name'], 'end' => $endTime]);

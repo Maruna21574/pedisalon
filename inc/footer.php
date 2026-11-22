@@ -33,7 +33,7 @@
         <li><a href="o-nas.php"><?= t('nav.about') ?></a></li>
         <li><a href="prevadzka.php"><?= t('nav.premises') ?></a></li>
         <li><a href="galeria.php"><?= t('nav.gallery') ?></a></li>
-        <li><a href="poradna.php">Poradňa</a></li>
+        <li><a href="poradna.php"><?= t('poradna.hero.title') ?></a></li>
         <li><a href="rezervacia.php"><?= t('footer.l.booking') ?></a></li>
         <li><a href="kontakt.php"><?= t('nav.contact') ?></a></li>
         <li><a href="ochrana-udajov.php"><?= t('footer.l.privacy') ?></a></li>

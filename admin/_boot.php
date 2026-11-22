@@ -43,7 +43,7 @@ if (empty($_SESSION['ok'])) {
     }
     ?><!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>Administrácia | <?= e($C['salon']['name']) ?></title>
-<link rel="stylesheet" href="../assets/css/style.css?v=14"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet"></head>
+<link rel="stylesheet" href="../assets/css/style.css?v=14"><link rel="stylesheet" href="../assets/css/fonts.css?v=1"></head>
 <body class="admin-body"><form method="post" class="login-box">
 <img src="../assets/img/logo.png" alt=""><h1 style="font-size:2rem">Administrácia</h1>
 <?php if ($err): ?><div class="alert bad"><?= e($err) ?></div><?php endif; ?>
@@ -57,12 +57,13 @@ if (empty($_SESSION['ok'])) {
 function admin_head(string $title, string $active, string $badge = '', string $intro = ''): void {
     global $C;
     $tabs = ['index' => ['index.php', 'Prehľad'], 'rezervacie' => ['rezervacie.php', 'Rezervácie'], 'sluzby' => ['sluzby.php', 'Služby a ceny'],
-             'texty' => ['texty.php', 'Texty webu'], 'recenzie' => ['recenzie.php', 'Recenzie'], 'galeria' => ['galeria.php', 'Galéria'], 'nastavenia' => ['nastavenia.php', 'Nastavenia']];
+             'texty' => ['texty.php', 'Texty webu'], 'poradna' => ['poradna.php', 'Poradňa'], 'certifikaty' => ['certifikaty.php', 'Certifikáty'],
+             'recenzie' => ['recenzie.php', 'Recenzie'], 'galeria' => ['galeria.php', 'Galéria'], 'udaje' => ['udaje.php', 'Údaje a zálohy'], 'nastavenia' => ['nastavenia.php', 'Nastavenia']];
     ?><!DOCTYPE html>
 <html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title><?= e($title) ?> | <?= e($C['salon']['name']) ?></title>
 <link rel="stylesheet" href="../assets/css/style.css?v=14">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
+<link rel="stylesheet" href="../assets/css/fonts.css?v=1"></head>
 <body class="admin-body">
 <div class="admin-wrap">
   <div class="admin-top">

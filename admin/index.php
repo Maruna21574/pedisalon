@@ -37,6 +37,24 @@ admin_head('Prehľad', 'index', '', 'Vitajte v administrácii. Vyberte, čo chce
     <p>Nahrávanie fotiek, kategórie, poradie a výber ukážok na úvodnej stránke.</p>
     <span class="dash-go">Upraviť galériu →</span>
   </a>
+  <a class="dash-card" href="poradna.php">
+    <span class="dash-num"><?= count(poradna_data()) ?></span>
+    <h2>Poradňa</h2>
+    <p>Témy o problémoch chodidiel: príčiny, príznaky, čo pomáha. Pridanie a úprava tém.</p>
+    <span class="dash-go">Upraviť Poradňu →</span>
+  </a>
+  <a class="dash-card" href="certifikaty.php">
+    <span class="dash-num"><?= count(certificates_data()) ?></span>
+    <h2>Certifikáty</h2>
+    <p>Certifikáty a školenia na stránke O nás. Pridanie nového, zmena názvu, poradia, zmazanie.</p>
+    <span class="dash-go">Upraviť certifikáty →</span>
+  </a>
+  <a class="dash-card" href="udaje.php">
+    <span class="dash-num">🔒</span>
+    <h2>Údaje a zálohy</h2>
+    <p>Vybavenie žiadostí klientov o údaje (GDPR), vymazanie údajov a stiahnutie zálohy webu.</p>
+    <span class="dash-go">Otvoriť →</span>
+  </a>
   <a class="dash-card" href="nastavenia.php">
     <span class="dash-num">⚙</span>
     <h2>Nastavenia</h2>

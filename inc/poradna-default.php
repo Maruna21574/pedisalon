@@ -1,0 +1,58 @@
+<?php
+/** Predvolené témy Poradne (upravujú sa v administrácii → Poradňa). */
+return [
+    [
+        'id' => 'vrastajuci-necht', 'icon' => 'nail', 'h' => 'Vrastajúci necht',
+        'intro' => 'Necht sa zarezáva do okolitej kože, čo spôsobuje bolesť, začervenanie a pri neliečení aj zápal. Najčastejšie postihuje palec na nohe.',
+        'causes' => ['Nesprávne strihanie nechtov – príliš nakrátko alebo do oblúka', 'Úzka, tesná alebo špicatá obuv, ktorá tlačí na prsty', 'Vrodený tvar nechta (zakrivená, tzv. klieštikovitá platnička)', 'Úraz, zatlačenie alebo opakovaná záťaž prsta (šport, dlhé státie)', 'Dedičnosť a zhrubnutie nechta po plesňovej infekcii'],
+        'signs' => ['Bolesť pri tlaku alebo v obuvi', 'Začervenanie a opuch okolo nechta', 'Pri zápale hnisanie alebo zvýšená teplota kože'],
+        'help' => 'V začiatkoch pomáha správna úprava nechta a neinvazívna korekcia spónou, ktorá necht postupne vedie do správneho tvaru – bez operácie.',
+        'link' => ['spona.php', 'Špona na vrastajúci necht'],
+        'doctor' => 'Pri hnisaní, silnej bolesti, horúčke alebo u diabetikov vždy najskôr navštívte lekára.',
+    ],
+    [
+        'id' => 'mykoza', 'icon' => 'dot', 'h' => 'Mykóza (plesňové ochorenie nechtov a kože)',
+        'intro' => 'Ide o plesňovú infekciu, ktorá zafarbuje a zhrubuje nechty alebo postihuje kožu medzi prstami a na chodidle. Je to veľmi časté a bez ošetrenia sa pomaly šíri.',
+        'causes' => ['Vlhké a teplé prostredie – dlhé nosenie uzavretej obuvi, potenie nôh', 'Chodenie naboso na verejných miestach: bazény, sauny, sprchy, telocvične', 'Požičiavanie obuvi, uterákov alebo pomôcok na pedikúru', 'Poranenie nechta alebo kože, cez ktoré plesne ľahšie vniknú', 'Oslabená imunita, cukrovka, poruchy prekrvenia', 'Neúplné vyliečenie predchádzajúcej infekcie'],
+        'signs' => ['Necht žltne, belie, hnedne alebo sa zakaľuje', 'Zhrubnutý, drobivý alebo odlupujúci sa necht', 'Šúpanie, svrbenie a praskliny medzi prstami', 'Nepríjemný zápach'],
+        'help' => 'Odborné ošetrenie nechtov – opatrné zbrúsenie zhrubnutej platničky a poradenstvo k domácej starostlivosti. Na samotnú liečbu plesne odporúčame lekára alebo lekárnika, protiplesňové prípravky vám predpíše alebo odporučí lekár či lekárnik.',
+        'link' => ['mykoza.php', 'Ošetrenie nechtov'],
+        'doctor' => 'Mykózu nie je možné vyliečiť len pedikúrou. Pri podozrení na plesňovú infekciu sa poraďte s lekárom (dermatológom).',
+    ],
+    [
+        'id' => 'kurie-oka', 'icon' => 'foot', 'h' => 'Kurie oká a mozole',
+        'intro' => 'Zhrubnutá, tvrdá koža v miestach, kde sa chodidlo opakovane trie alebo tlačí. Kurie oko má tvrdé jadro, ktoré tlačí do hĺbky a môže byť veľmi bolestivé.',
+        'causes' => ['Nevhodná obuv – tesná, príliš voľná alebo s tvrdými švami', 'Deformity chodidla a prstov (vybočený palec, kladivkové prsty, plochá noha)', 'Chodenie bez ponožiek alebo v ponožkách s hrubými švami', 'Nesprávne zaťažovanie chodidla pri chôdzi', 'Dlhé státie, šport, nadváha', 'Suchá koža, ktorá sa horšie prispôsobuje tlaku'],
+        'signs' => ['Tvrdý, žltkastý hrubý bod s jadrom (kurie oko)', 'Plošne zhrubnutá koža (mozol)', 'Bolesť pri každom kroku alebo pri tlaku obuvi'],
+        'help' => 'Odborné odstránenie zrohovatenej kože a jadra kuriaho oka, úprava tlakových miest a rady k vhodnej obuvi. Ošetrenie prináša rýchlu úľavu.',
+        'link' => ['bradavice-kurie-oka.php', 'Kurie oká a otlaky'],
+        'doctor' => 'Kurie oká nikdy nevyrezávajte doma žiletkou. Pri diabete alebo poruchách prekrvenia sa poraďte s lekárom.',
+    ],
+    [
+        'id' => 'bradavice', 'icon' => 'sparkle', 'h' => 'Bradavice na chodidle',
+        'intro' => 'Vyvolávajú ich vírusy (HPV). Na chodidle bývajú zatlačené dovnútra, preto sa podobajú na kurie oká, no mávajú drobné tmavé bodky a bolia aj pri stlačení zo strán.',
+        'causes' => ['Vírusová infekcia (ľudský papilomavírus) – prenáša sa kontaktom', 'Chodenie naboso v bazénoch, saunách, sprchách a šatniach', 'Drobné poranenia alebo macerovaná (rozmočená) koža, cez ktorú vírus vniká', 'Zníženej obranyschopnosti organizmu', 'Spoločné používanie uterákov, obuvi a pomôcok'],
+        'signs' => ['Tvrdý výrastok s drobnými tmavými bodkami', 'Bolesť pri stlačení zo strán, nielen zhora', 'Prerušené línie kožnej kresby v mieste bradavice'],
+        'help' => 'Odborné posúdenie, či ide o bradavicu alebo kurie oko, a poradenstvo, ako zabrániť šíreniu na ďalšie miesta. Samotné bradavice je vhodné riešiť s lekárom.',
+        'link' => ['bradavice-kurie-oka.php', 'Kurie oká a otlaky'],
+        'doctor' => 'Bradavice sú infekčné. Pri viacerých, rýchlo sa šíriacich alebo bolestivých bradaviciach vyhľadajte lekára.',
+    ],
+    [
+        'id' => 'popraskane-paty', 'icon' => 'heel', 'h' => 'Popraskané päty a suchá koža',
+        'intro' => 'Zrohovatená koža päty stratí pružnosť a začne praskať. Praskliny môžu byť hlboké, krvácať a bolieť, hlavne v lete a v otvorenej obuvi.',
+        'causes' => ['Nedostatok hydratácie – suchá koža, nedostatok krémov na nohy', 'Otvorená obuv, sandále a chodenie naboso', 'Dlhé státie a nadmerný tlak na pätu (nadváha)', 'Vplyv horúcej vody a agresívnych mydiel', 'Plesňová infekcia kože (tzv. mokasínový typ)', 'Cukrovka, ochorenie štítnej žľazy, nedostatok vitamínov', 'Vek – koža s vekom vysychá'],
+        'signs' => ['Zhrubnutá, žltkastá koža na päte', 'Plytké alebo hlboké praskliny, niekedy krvácanie', 'Pálenie a bolesť pri chôdzi'],
+        'help' => 'Pedikúra (suchá prístrojová alebo mokrá skalpelová) zbaví chodidlo zrohovatenej kože a ošetrenie krémom zmäkčí pokožku. Dôležitá je následná domáca starostlivosť s krémom s močovinou (urea).',
+        'link' => ['pedikura.php', 'Pedikúra a lakovanie'],
+        'doctor' => 'Hlboké, krvácajúce alebo zapálené praskliny a praskliny u diabetikov patria k lekárovi.',
+    ],
+    [
+        'id' => 'potenie-zapach', 'icon' => 'leaf', 'h' => 'Potenie nôh a zápach',
+        'intro' => 'Chodidlá majú množstvo potných žliaz. Nadmerné potenie spolu s vlhkým prostredím v obuvi vytvára podmienky pre baktérie, ktoré spôsobujú zápach.',
+        'causes' => ['Syntetická obuv a ponožky, ktoré neprepúšťajú vzduch', 'Dlhé nosenie tej istej obuvi bez vysušenia', 'Stres a hormonálne zmeny', 'Nadmerné potenie (hyperhidróza)', 'Plesne a baktérie na koži a v obuvi'],
+        'signs' => ['Vlhké chodidlá a ponožky', 'Zápach z nôh a obuvi', 'Zmäknutá, zbelavá koža, ktorá sa ľahšie infikuje'],
+        'help' => 'Pravidelné ošetrenie chodidiel a poradenstvo – prirodzené materiály, striedanie obuvi, dôkladné sušenie nôh a vhodné prípravky.',
+        'link' => ['pedikura.php', 'Pedikúra a lakovanie'],
+        'doctor' => 'Ak je potenie extrémne a výrazne obmedzuje bežný život, poraďte sa s lekárom.',
+    ],
+];;

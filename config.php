@@ -44,6 +44,7 @@ return [
         'min_lead_hours'=> 3,    // najskôr o koľko hodín odo teraz sa dá rezervovať
         'max_days_ahead'=> 60,   // na koľko dní dopredu
         'auto_confirm'  => false, // true = rezervácia je ihneď potvrdená, false = čaká na potvrdenie salónom
+        'reminders'     => false, // true = deň vopred sa potvrdeným rezerváciám s e-mailom pošle pripomienka
         'buffer_min'    => 10,   // prestávka medzi klientmi (min)
     ],
 

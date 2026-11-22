@@ -6,6 +6,8 @@ ob_start(fn(string $html) => preg_replace(['~href="index\.php"~', '~(href|action
 $pageTitle = isset($title) ? $title . ' | ' . $S['name'] : $S['name'] . ' – ' . $S['tagline'];
 $pageDesc  = $desc ?? 'Profesionálna pedikúra, lakovanie Gellak, ošetrenie nechtov, kurích očí a vrastajúcich nechtov, reflexná masáž chodidiel. Objednajte sa online v PediSalóne ZK.';
 $active = $active ?? '';
+// Údržba na pozadí po odoslaní stránky (mazanie starých údajov, pripomienky termínov)
+register_shutdown_function(function () { if (function_exists('fastcgi_finish_request')) @fastcgi_finish_request(); housekeeping(); });
 $isHome = ($active === 'home');
 
 function icon(string $n, string $cls = 'ico'): string {
@@ -36,7 +38,7 @@ $nav = [
     ['sluzby', 'sluzby.php',    tx('nav.services')],
     ['cennik', 'cennik.php',    tx('nav.pricing')],
     ['galeria','galeria.php',   tx('nav.gallery')],
-    ['poradna','poradna.php',   'Poradňa'],
+    ['poradna','poradna.php',   tx('poradna.hero.title')],
     ['onas',   'o-nas.php',     tx('nav.about')],
     ['kontakt','kontakt.php',   tx('nav.contact')],
 ];
@@ -60,7 +62,7 @@ $servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'poradna'
 <!-- Písma sú uložené na vlastnom serveri (nič sa nenačítava z Google) -->
 <link rel="preload" href="assets/fonts/manrope-normal-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css?v=1">
-<link rel="stylesheet" href="assets/css/style.css?v=32">
+<link rel="stylesheet" href="assets/css/style.css?v=33">
 <script type="application/ld+json">
 <?= json_encode([
     '@context' => 'https://schema.org', '@type' => 'HealthAndBeautyBusiness',

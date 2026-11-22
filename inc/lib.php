@@ -423,3 +423,6 @@ function img_thumb(string $file): string {
 function tphotos(string $key): array {
     return array_values(array_filter(array_map('img_file', lines(tx($key))), fn($f) => is_file(__DIR__ . '/../assets/img/' . $f)));
 }
+
+require_once __DIR__ . '/mail.php';
+require_once __DIR__ . '/content.php';
