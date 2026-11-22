@@ -16,6 +16,7 @@ function cfg(): array {
             if (!empty($o['hours']) && is_array($o['hours'])) {
                 foreach ($o['hours'] as $d => $h) $c['hours'][(int)$d] = (is_array($h) && count($h) === 2) ? array_values($h) : null;
             }
+            if (array_key_exists('hours_by_appointment', $o)) $c['hours_by_appointment'] = (bool)$o['hours_by_appointment'];
             if (!empty($o['services']) && is_array($o['services'])) $c['services'] = $o['services'];
             if (!empty($o['admin_password_hash'])) $c['admin_password_hash'] = $o['admin_password_hash'];
         }
@@ -130,6 +131,7 @@ const DAY_NAMES = [1 => 'Pondelok', 2 => 'Utorok', 3 => 'Streda', 4 => 'Štvrtok
 
 /** Stručné otváracie hodiny pre pätičku (zoskupí rovnaké po sebe idúce dni). */
 function hours_summary(): string {
+    if (!empty(cfg()['hours_by_appointment'])) return e(tx('hours.by_appointment'));
     $short = [1 => 'Po', 2 => 'Ut', 3 => 'St', 4 => 'Št', 5 => 'Pi', 6 => 'So', 7 => 'Ne'];
     $groups = [];
     foreach (cfg()['hours'] as $d => $h) {

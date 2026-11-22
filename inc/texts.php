@@ -209,6 +209,7 @@ Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľat
     'kontakt.l.email'    => ['Popis – e-mail', 'E-mail', 'text'],
     'kontakt.l.address'  => ['Popis – adresa', 'Adresa', 'text'],
     'kontakt.l.hours'    => ['Popis – otváracie hodiny', 'Otváracie hodiny', 'text'],
+    'hours.by_appointment' => ['Text namiesto otváracích hodín (keď salón pracuje po dohode – nastavenie v Nastaveniach → Otváracie hodiny)', 'Po telefonickej dohode', 'text'],
     'kontakt.closed'     => ['Slovo pre zatvorený deň', 'Zatvorené', 'text'],
     'kontakt.map'        => ['Odkaz pod mapou', 'Otvoriť v Mapách Google →', 'text'],
   ],

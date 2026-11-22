@@ -24,14 +24,17 @@ return [
     ],
 
     // ---------- Otváracie hodiny ----------
+    // true = salón pracuje po dohode: na webe sa namiesto hodín zobrazí text „Po dohode“.
+    // Hodiny nižšie slúžia vtedy len na ponuku termínov v online rezervácii (potvrdzuje ich salón).
+    'hours_by_appointment' => true,
     // Kľúč = deň v týždni (1 = pondelok … 7 = nedeľa). null = zatvorené.
     'hours' => [
         1 => ['09:00', '17:00'],
         2 => ['09:00', '17:00'],
         3 => ['09:00', '17:00'],
         4 => ['09:00', '17:00'],
-        5 => ['09:00', '15:00'],
-        6 => null,
+        5 => ['09:00', '17:00'],
+        6 => ['09:00', '17:00'],
         7 => null,
     ],
 

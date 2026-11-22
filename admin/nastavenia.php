@@ -33,7 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $hours[$d] = [$from, $to];
         }
         if ($errs) { flash(implode(' ', $errs), 'bad'); redirect('nastavenia.php'); }
-        settings_update(function (array $s) use ($hours) { $s['hours'] = $hours; return $s; });
+        $byAppt = !empty($_POST['by_appointment']);
+        settings_update(function (array $s) use ($hours, $byAppt) { $s['hours'] = $hours; $s['hours_by_appointment'] = $byAppt; return $s; });
         flash('Otváracie hodiny uložené.');
     } elseif ($a === 'booking') {
         $b = $_POST['booking'] ?? [];
@@ -88,6 +89,7 @@ admin_head('Nastavenia', 'nastavenia');
   <h2>Otváracie hodiny</h2>
   <form method="post">
     <?= csrf_field() ?><input type="hidden" name="action" value="hours">
+    <label class="check"><input type="checkbox" name="by_appointment" value="1" <?= !empty($C['hours_by_appointment']) ? 'checked' : '' ?>> <span><b>Pracujeme po dohode</b> – na webe sa namiesto hodín zobrazí „<?= e(tx('hours.by_appointment')) ?>“. Hodiny nižšie sa vtedy použijú len na ponuku termínov v online rezervácii.</span></label>
     <table class="tbl hours-edit">
       <?php foreach (DAY_NAMES as $d => $n): $h = $C['hours'][$d] ?? null; ?>
       <tr>

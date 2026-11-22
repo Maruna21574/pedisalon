@@ -22,11 +22,12 @@ $today = (int)date('N');
         <li><span class="ic"><?= icon('mail') ?></span><div><b><?= t('kontakt.l.email') ?></b><a href="mailto:<?= e($S['email']) ?>"><?= e($S['email']) ?></a></div></li>
         <li><span class="ic"><?= icon('pin') ?></span><div><b><?= t('kontakt.l.address') ?></b><?= e($S['address']) ?></div></li>
         <li><span class="ic"><?= icon('clock') ?></span><div style="flex:1"><b><?= t('kontakt.l.hours') ?></b>
+          <?php if (!empty($C['hours_by_appointment'])): ?><div><?= e(tx('hours.by_appointment')) ?></div><?php else: ?>
           <table class="hours-table">
             <?php foreach (DAY_NAMES as $d => $n): $h = $C['hours'][$d]; ?>
             <tr class="<?= $d === $today ? 'today' : '' ?>"><td><?= $n ?></td><td><?= $h ? $h[0] . ' – ' . $h[1] : e(tx('kontakt.closed')) ?></td></tr>
             <?php endforeach; ?>
-          </table></div></li>
+          </table><?php endif; ?></div></li>
       </ul>
     </div>
     <div>
