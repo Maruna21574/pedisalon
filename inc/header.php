@@ -57,12 +57,10 @@ $servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'poradna'
 <meta property="og:image" content="assets/img/logo-square.png">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/img/logo-square.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Písma sa načítavajú bez blokovania vykresľovania stránky -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Manrope:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Manrope:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"></noscript>
-<link rel="stylesheet" href="assets/css/style.css?v=31">
+<!-- Písma sú uložené na vlastnom serveri (nič sa nenačítava z Google) -->
+<link rel="preload" href="assets/fonts/manrope-normal-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css?v=1">
+<link rel="stylesheet" href="assets/css/style.css?v=32">
 <script type="application/ld+json">
 <?= json_encode([
     '@context' => 'https://schema.org', '@type' => 'HealthAndBeautyBusiness',

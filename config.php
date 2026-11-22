@@ -20,7 +20,7 @@ return [
         'facebook'  => 'https://www.facebook.com/972049906001172/',
         'instagram' => 'https://www.instagram.com/pedisalonzk/',
         'maps_embed'=> 'https://www.google.com/maps?q=N%C3%A1m.+ban%C3%ADkov+2%2C+972+51+Handlov%C3%A1%2C+Slovakia&output=embed',   // adresu mapy zmeníte v administrácii (Nastavenia)
-        'ico'       => '',   // IČO / fakturačné údaje (voliteľné, zobrazí sa v pätičke)
+        'ico'       => 'IČO: 41600673',   // IČO / fakturačné údaje (voliteľné, zobrazí sa v pätičke)
     ],
 
     // ---------- Otváracie hodiny ----------

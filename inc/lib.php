@@ -66,6 +66,23 @@ function store_mutate(string $file, callable $fn) {
     return $result['return'] ?? null;
 }
 
+/* ---------- Ochrana osobných údajov: automatické mazanie starých údajov ---------- */
+
+/** Maže rezervácie a správy z formulára staršie ako 12 mesiacov (podľa zásad ochrany údajov). Beží najviac raz za deň. */
+function purge_old_data(): void {
+    $mark = DATA_DIR . '/.purged';
+    if (is_file($mark) && filemtime($mark) > time() - 86400) return;
+    @touch($mark);
+    $cut = date('Y-m-d', strtotime('-12 months'));
+    foreach ([BOOKINGS_FILE => 'date', DATA_DIR . '/messages.json' => 'date'] as $file => $field) {
+        if (!is_file($file)) continue;
+        store_mutate($file, function (array $all) use ($cut, $field) {
+            $keep = array_values(array_filter($all, fn($r) => substr((string)($r[$field] ?? '9999'), 0, 10) >= $cut));
+            return count($keep) === count($all) ? [] : ['data' => $keep];
+        });
+    }
+}
+
 /* ---------- Čas ---------- */
 
 function hm_to_min(string $hm): int { [$h, $m] = array_map('intval', explode(':', $hm)); return $h * 60 + $m; }

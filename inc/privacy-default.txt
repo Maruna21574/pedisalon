@@ -1,0 +1,55 @@
+Tieto zásady vysvetľujú, aké osobné údaje pri používaní tohto webu spracúvame, na aký účel, ako dlho a aké práva máte. Spracúvanie sa riadi nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 (GDPR) a zákonom č. 18/2018 Z. z. o ochrane osobných údajov. Platné od 22. 11. 2026.
+
+## 1. Kto je prevádzkovateľ
+
+Prevádzkovateľom osobných údajov je Zdenka Kováčová, podnikajúca pod obchodným menom {name}, miesto podnikania a prevádzka: {address}, {ico}. Kontakt: e-mail {email}, tel.: {phone}. Na tieto kontakty môžete posielať aj všetky žiadosti týkajúce sa vašich osobných údajov. Zodpovednú osobu nemáme ustanovenú, pretože to zákon nevyžaduje.
+
+## 2. Aké údaje spracúvame, na aký účel a na akom právnom základe
+
+**Online rezervácia.** Pri rezervácii termínu spracúvame vaše meno a priezvisko, telefónne číslo, e-mail (nepovinný), vybranú službu, dátum a čas, poznámku, ktorú nám napíšete, a dátum vytvorenia rezervácie. Účelom je vybavenie rezervácie, jej potvrdenie, prípadná zmena alebo zrušenie a komunikácia s vami o termíne. Právnym základom je opatrenie pred uzavretím zmluvy a plnenie zmluvy o poskytnutí služby (čl. 6 ods. 1 písm. b) GDPR). Poskytnutie týchto údajov je nevyhnutné, inak vám termín nemôžeme rezervovať. Potvrdenie rezervácie vám odošleme na e-mail, ak ho uvediete.
+
+**Kontaktný formulár, e-mail a telefón.** Ak nám napíšete alebo zavoláte, spracúvame údaje, ktoré nám sami poskytnete (meno, e-mail, telefón, text správy), aby sme vám mohli odpovedať. Právnym základom je náš oprávnený záujem odpovedať na dopyty (čl. 6 ods. 1 písm. f) GDPR), prípadne opatrenie pred uzavretím zmluvy (čl. 6 ods. 1 písm. b) GDPR). Odoslanie formulára vyžaduje potvrdenie, že ste sa oboznámili s týmito zásadami.
+
+**Údaje o zdraví.** Do poznámky pri rezervácii ani do správy prosíme neuvádzajte údaje o zdravotnom stave, ak to nie je nevyhnutné pre bezpečné poskytnutie služby (napríklad cukrovka, poruchy krvného obehu, alergie). Ak ich uvediete, robíte tak dobrovoľne a udeľujete tým výslovný súhlas s ich spracúvaním na účel prípravy a bezpečného poskytnutia služby (čl. 9 ods. 2 písm. a) GDPR). Súhlas môžete kedykoľvek odvolať; odvolanie nemá vplyv na zákonnosť spracúvania pred jeho odvolaním. Údaje, ktoré nám poskytnete priamo v salóne počas ošetrenia, spracúvame samostatne podľa osobitného poučenia na mieste.
+
+**Technické údaje pri návšteve webu.** Server webhostingu pri každom zobrazení stránky automaticky zaznamenáva technické údaje: IP adresu, dátum a čas prístupu, požadovanú stránku, typ prehliadača a zariadenia. Tieto záznamy slúžia na zabezpečenie, stabilitu a ochranu webu pred zneužitím (oprávnený záujem, čl. 6 ods. 1 písm. f) GDPR). Uchovávajú sa podľa nastavenia poskytovateľa hostingu. My s nimi nijako nepracujeme a nevytvárame z nich profily.
+
+**Účtovné a daňové údaje.** Ak vám po ošetrení vystavíme doklad, spracúvame údaje potrebné na jeho vystavenie na základe zákonnej povinnosti (čl. 6 ods. 1 písm. c) GDPR) a uchovávame ich po dobu, ktorú určujú právne predpisy.
+
+**Cookies a podobné technológie.** Používame len nevyhnutné technické údaje a, na základe vášho súhlasu, externú službu Google Mapy. Podrobnosti nájdete na stránke Cookies.
+
+**Marketing a profilovanie.** Nepoužívame analytické ani reklamné nástroje, nesledujeme vás a nezasielame vám obchodné oznámenia, ak ste o ne výslovne nepožiadali. Nevykonávame automatizované individuálne rozhodovanie ani profilovanie.
+
+## 3. Ako dlho údaje uchovávame
+
+Údaje z rezervácií uchovávame najdlhšie 12 mesiacov od termínu rezervácie, potom ich automaticky vymažeme. Správy z kontaktného formulára a e-maily uchovávame po dobu potrebnú na vybavenie dopytu, najdlhšie 12 mesiacov. Účtovné doklady uchovávame po dobu určenú právnymi predpismi. Údaje, ktoré spracúvame na základe súhlasu, uchovávame, kým súhlas neodvoláte, najdlhšie však po dobu, kedy sú potrebné na daný účel.
+
+## 4. Komu údaje sprístupňujeme
+
+Vaše údaje nepredávame a neposkytujeme ich na marketingové účely. Sprístupniť ich môžeme len tým, ktorí nám pomáhajú zabezpečiť prevádzku webu a komunikáciu: poskytovateľovi webhostingu a e-mailových služieb, ktorý údaje spracúva v našom mene ako sprostredkovateľ na základe zmluvy, a orgánom verejnej moci, ak nám to ukladá zákon. Ak povolíte zobrazenie mapy, údaje o vašej návšteve (najmä IP adresu) získa aj spoločnosť Google Ireland Limited, ako samostatný prevádzkovateľ.
+
+## 5. Prenos údajov mimo EÚ
+
+Údaje z rezervácií a formulárov neprenášame do tretích krajín. Pri zobrazení mapy môže spoločnosť Google prenášať údaje aj do USA; Google sa na takýto prenos spolieha na rámec EU-US Data Privacy Framework a štandardné zmluvné doložky. Ak mapu nepovolíte, k žiadnemu prenosu nedochádza. Na stránkach nepoužívame písma ani skripty zo serverov tretích strán, všetko sa načítava z nášho webu.
+
+## 6. Vaše práva
+
+Máte právo: požadovať prístup k svojim osobným údajom a kópiu (čl. 15 GDPR), na opravu nesprávnych údajov (čl. 16), na vymazanie (čl. 17), na obmedzenie spracúvania (čl. 18), na prenosnosť údajov (čl. 20) a namietať proti spracúvaniu založenému na oprávnenom záujme (čl. 21). Ak spracúvanie vychádza z vášho súhlasu, môžete ho kedykoľvek odvolať. Žiadosť nám stačí poslať na {email} alebo osobne v salóne; odpovieme vám bez zbytočného odkladu, najneskôr do jedného mesiaca. Pre vyššiu istotu vás môžeme požiadať o overenie totožnosti.
+
+Ak sa domnievate, že pri spracúvaní došlo k porušeniu vašich práv, máte právo podať sťažnosť dozornému orgánu: Úrad na ochranu osobných údajov Slovenskej republiky, Hraničná 12, 820 07 Bratislava 27, tel.: +421 2 3231 3214, www.dataprotection.gov.sk. Pred podaním sťažnosti nás môžete osloviť priamo; radi vec vyriešime.
+
+## 7. Zabezpečenie údajov
+
+Údaje chránime technickými a organizačnými opatreniami: web je dostupný cez šifrované spojenie, prístup do administrácie je chránený heslom, údaje o rezerváciách sú uložené v chránenom adresári, ku ktorému nie je prístup z internetu, a prístup k nim má len prevádzkovateľ.
+
+## 8. Osobné údaje detí
+
+Web je určený osobám starším ako 16 rokov. Rezerváciu pre dieťa do 16 rokov zadáva zákonný zástupca, ktorý nám poskytuje svoje kontaktné údaje.
+
+## 9. Odkazy na iné weby
+
+Na webe sú odkazy na naše profily na Facebooku a Instagrame. Po kliknutí na odkaz sa už riadite zásadami týchto služieb, za ktoré nezodpovedáme. Samotné odkazy nesledujú vašu aktivitu na našom webe, nepoužívame sociálne zásuvné moduly.
+
+## 10. Zmeny zásad
+
+Tieto zásady môžeme aktualizovať, napríklad pri zmene služieb alebo právnych predpisov. Aktuálne znenie je vždy zverejnené na tejto stránke spolu s dátumom platnosti.

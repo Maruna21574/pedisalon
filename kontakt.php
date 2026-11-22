@@ -49,7 +49,12 @@ $today = (int)date('N');
   <div class="wrap" style="margin-top:44px">
     <div class="map reveal">
       <?php if ($S['maps_embed']): ?>
-        <iframe src="<?= e($S['maps_embed']) ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe>
+        <div class="map-consent" data-map-src="<?= e($S['maps_embed']) ?>">
+          <?= icon('pin', 'ico') ?>
+          <p><b><?= e($S['address']) ?></b></p>
+          <p class="mc-note">Mapa je zo služby Google Mapy. Po jej zobrazení Google získa vašu IP adresu a môže uložiť cookies. Podrobnosti v <a href="ochrana-udajov.php">zásadách ochrany osobných údajov</a>.</p>
+          <p><button type="button" class="btn btn-sm" data-map-allow>Zobraziť mapu</button> <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=<?= urlencode($S['address']) ?>" target="_blank" rel="noopener"><?= t('kontakt.map') ?></a></p>
+        </div>
       <?php else: ?>
         <div style="padding:60px 20px"><?= icon('pin', 'ico') ?><p style="margin:.5em 0 0"><b><?= e($S['address']) ?></b><br><a href="https://www.google.com/maps/search/?api=1&query=<?= urlencode($S['address']) ?>" target="_blank" rel="noopener"><?= t('kontakt.map') ?></a></p></div>
       <?php endif; ?>

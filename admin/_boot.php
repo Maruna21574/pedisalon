@@ -7,6 +7,8 @@ require __DIR__ . '/../inc/lib.php';
 session_set_cookie_params(['httponly' => true, 'samesite' => 'Strict', 'secure' => !empty($_SERVER['HTTPS'])]);
 session_name('pedi_admin');
 session_start();
+require_once __DIR__ . '/../inc/lib.php';
+purge_old_data();
 header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');
 

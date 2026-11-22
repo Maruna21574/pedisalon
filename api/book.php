@@ -4,6 +4,7 @@ require __DIR__ . '/../inc/lib.php';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') json_out(['error' => 'Metóda nie je povolená'], 405);
 
 $c = cfg();
+purge_old_data();
 $in = json_decode(file_get_contents('php://input'), true);
 if (!is_array($in)) json_out(['error' => 'Neplatná požiadavka'], 400);
 

@@ -79,7 +79,7 @@ foreach ($C['services'] as $id => $s) $svcData[$id] = ['name' => $s['name'], 'du
             <div class="field"><label for="f-phone"><?= t('rez.f.phone') ?></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+421 9xx xxx xxx" required><div class="err"></div></div>
             <div class="field"><label for="f-email"><?= t('rez.f.email') ?></label><input id="f-email" name="email" type="email" autocomplete="email"><div class="err"></div></div>
           </div>
-          <div class="field"><label for="f-note"><?= t('rez.f.note') ?></label><textarea id="f-note" name="note" placeholder="<?= e(tx('rez.f.noteph')) ?>"></textarea><div class="err"></div></div>
+          <div class="field"><label for="f-note"><?= t('rez.f.note') ?></label><textarea id="f-note" name="note" placeholder="<?= e(tx('rez.f.noteph')) ?>"></textarea><small style="color:var(--muted)">Údaje o zdraví uvádzajte len ak sú nevyhnutné pre bezpečné ošetrenie. Viac v <a href="ochrana-udajov.php" target="_blank">ochrane osobných údajov</a>.</small><div class="err"></div></div>
           <div class="field hp" aria-hidden="true"><label>Web</label><input name="website" tabindex="-1" autocomplete="off"></div>
           <div class="field"><label class="check" style="margin:0"><input type="checkbox" name="consent" value="1"> <span><?= t('rez.consent') ?> <a href="ochrana-udajov.php" target="_blank"><?= t('rez.consentlink') ?></a>. *</span></label><div class="err"></div></div>
           <div class="bk-nav"><button type="button" class="btn btn-ghost" data-back><?= t('rez.back') ?></button><button type="submit" class="btn btn-lg" id="bkSubmit"><?= t('rez.submit') ?> <?= icon('check') ?></button></div>

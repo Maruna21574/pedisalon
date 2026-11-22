@@ -37,6 +37,8 @@
         <li><a href="rezervacia.php"><?= t('footer.l.booking') ?></a></li>
         <li><a href="kontakt.php"><?= t('nav.contact') ?></a></li>
         <li><a href="ochrana-udajov.php"><?= t('footer.l.privacy') ?></a></li>
+        <li><a href="cookies.php">Cookies</a></li>
+        <li><button type="button" class="linklike" data-cookie-settings>Nastavenia cookies</button></li>
       </ul>
     </div>
     <div>
@@ -58,6 +60,22 @@
 <a href="rezervacia.php" class="fab" aria-label="<?= e(tx('nav.book')) ?>"><?= icon('clock') ?><span><?= t('fab.book') ?></span></a>
 
 <canvas id="petals" aria-hidden="true"></canvas>
+<div class="cookie-bar" id="cookieBar" role="dialog" aria-live="polite" aria-label="Súhlas s cookies" hidden>
+  <div class="cb-main">
+    <p><b>Vaše súkromie</b><br>Tento web používa len nevyhnutné technické údaje. Voliteľne môžete povoliť externú službu <b>Google Mapy</b> (zobrazenie mapy v Kontakte). Bez vášho súhlasu sa nič z Google nenačíta. Viac v <a href="ochrana-udajov.php">ochrane osobných údajov</a> a <a href="cookies.php">zásadách cookies</a>.</p>
+    <div class="cb-btns">
+      <button type="button" class="btn btn-sm" data-cb="all">Prijať všetko</button>
+      <button type="button" class="btn btn-ghost btn-sm" data-cb="necessary">Len nevyhnutné</button>
+      <button type="button" class="linklike" data-cb="custom">Nastavenia</button>
+    </div>
+  </div>
+  <div class="cb-details" hidden>
+    <label class="check"><input type="checkbox" checked disabled> <span><b>Nevyhnutné</b> – zapamätanie vašej voľby cookies a bezpečné fungovanie webu. Nedajú sa vypnúť.</span></label>
+    <label class="check"><input type="checkbox" name="maps"> <span><b>Externé služby – Google Mapy</b> – zobrazenie mapy v Kontakte (Google získa vašu IP adresu a môže uložiť cookies).</span></label>
+    <button type="button" class="btn btn-sm" data-cb="save">Uložiť moju voľbu</button>
+  </div>
+</div>
+<script src="assets/js/consent.js?v=1" defer></script>
 <script src="assets/js/hero.js?v=3" defer></script>
 <script src="assets/js/main.js?v=4" defer></script>
 <?php if (!empty($extraJs)) foreach ($extraJs as $js): ?>
