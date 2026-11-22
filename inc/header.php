@@ -54,10 +54,30 @@ $servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'poradna'
 <title><?= e($pageTitle) ?></title>
 <meta name="description" content="<?= e($pageDesc) ?>">
 <meta name="theme-color" content="#d4e5f3">
+<?php
+// Absolútne adresy pre náhľad pri zdieľaní (sociálne siete nepodporujú relatívne cesty)
+$baseUrl = rtrim(!empty($S['url']) ? $S['url'] : site_url(), '/');
+$pagePath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$pagePath = preg_replace('~^' . preg_quote(rtrim(dirname($_SERVER['SCRIPT_NAME'] ?? '/'), '/'), '~') . '~', '', $pagePath) ?: '/';
+$pagePath = preg_replace('~(^|/)index\.php$~', '$1', $pagePath);
+$canonical = $baseUrl . $pagePath;
+$ogImage = $baseUrl . '/assets/img/og-image.jpg';
+?>
+<link rel="canonical" href="<?= e($canonical) ?>">
 <meta property="og:title" content="<?= e($pageTitle) ?>">
 <meta property="og:description" content="<?= e($pageDesc) ?>">
-<meta property="og:image" content="assets/img/logo-square.png">
+<meta property="og:url" content="<?= e($canonical) ?>">
+<meta property="og:site_name" content="<?= e($S['name']) ?>">
+<meta property="og:locale" content="sk_SK">
 <meta property="og:type" content="website">
+<meta property="og:image" content="<?= e($ogImage) ?>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<?= e($S['name']) ?> – pedikúra a ošetrenie chodidiel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= e($pageTitle) ?>">
+<meta name="twitter:description" content="<?= e($pageDesc) ?>">
+<meta name="twitter:image" content="<?= e($ogImage) ?>">
 <link rel="icon" href="assets/img/logo-square.png">
 <!-- Písma sú uložené na vlastnom serveri (nič sa nenačítava z Google) -->
 <link rel="preload" href="assets/fonts/manrope-normal-800-latin.woff2" as="font" type="font/woff2" crossorigin>
