@@ -14,11 +14,11 @@ return [
         'tagline'   => 'Starostlivosť o vaše nohy s láskou',
         'phone'     => '+421 944 727 573',
         'phone_raw' => '+421944727573',
-        'email'     => 'info@pedisalon-zk.sk',      // sem chodia upozornenia o rezerváciách
+        'email'     => 'info@pedisalonzk.sk',      // sem chodia upozornenia o rezerváciách
         'address'   => 'Nám. baníkov 2, 972 51 Handlová',
         'city'      => 'Handlová',
-        'facebook'  => 'https://www.facebook.com/',
-        'instagram' => 'https://www.instagram.com/',
+        'facebook'  => 'https://www.facebook.com/972049906001172/',
+        'instagram' => 'https://www.instagram.com/pedisalonzk/',
         'maps_embed'=> 'https://www.google.com/maps?q=N%C3%A1m.+ban%C3%ADkov+2%2C+972+51+Handlov%C3%A1%2C+Slovakia&output=embed',   // adresu mapy zmeníte v administrácii (Nastavenia)
         'ico'       => '',   // IČO / fakturačné údaje (voliteľné, zobrazí sa v pätičke)
     ],
