@@ -24,7 +24,7 @@ $rest = array_slice($photos, 2);
 <section class="section">
   <div class="wrap split">
     <div class="reveal left">
-      <span class="kicker" style="font-family:var(--font-script);color:var(--rose-600);font-size:1.7rem"><?= t('premises.kicker') ?></span>
+      <span class="kicker"><?= t('premises.kicker') ?></span>
       <h2><?= t('premises.title') ?></h2>
       <?= trich('premises.body') ?>
       <a href="rezervacia.php" class="btn"><?= t('nav.book') ?> <?= icon('arrow') ?></a>
