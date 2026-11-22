@@ -14,11 +14,6 @@ require __DIR__ . '/inc/header.php';
         <a href="rezervacia.php" class="btn btn-lg"><?= t('nav.book') ?> <?= icon('arrow') ?></a>
         <a href="sluzby.php" class="btn btn-ghost btn-lg"><?= t('home.btn.services') ?></a>
       </div>
-      <div class="hero-badges reveal" style="--d:.4s">
-        <?php foreach (tl('home.badges') as $i => $b): ?>
-        <span><?= icon(['shield', 'heart', 'clock'][$i] ?? 'check') ?> <?= e($b) ?></span>
-        <?php endforeach; ?>
-      </div>
     </div>
     <div class="hero-visual reveal zoom" style="--d:.2s" id="heroVisual">
       <div class="stage">
@@ -34,11 +29,9 @@ require __DIR__ . '/inc/header.php';
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <?php for ($i = 0; $i < 2; $i++): ?>
+<div class="service-strip">
+  <div class="wrap">
     <?php foreach (tl('home.marquee') as $m): ?><span><?= e($m) ?></span><?php endforeach; ?>
-    <?php endfor; ?>
   </div>
 </div>
 
@@ -50,16 +43,13 @@ require __DIR__ . '/inc/header.php';
       <p><?= t('home.services.text') ?></p>
     </div>
     <div class="cards">
-      <?php $seenPages = [];
-      foreach ($C['services'] as $id => $s):
-        if (isset($seenPages[$s['page']])) continue; // služby so spoločnou podstránkou zobrazí len raz
-        $seenPages[$s['page']] = true; ?>
+      <?php foreach (service_groups() as $s): ?>
       <a class="card" href="<?= e($s['page']) ?>">
         <div class="thumb"><img src="<?= e(img_thumb($s['img'])) ?>" alt="<?= e($s['name']) ?>" loading="lazy" decoding="async"><div class="badge-ico"><?= icon($s['icon']) ?></div></div>
         <div class="body">
           <h3><?= e($s['name']) ?></h3>
           <p><?= e($s['short']) ?></p>
-          <div class="meta"><span class="price"><?= t('common.from') ?> <?= money($s['price']) ?></span><span class="more"><?= t('home.card.more') ?> <?= icon('arrow') ?></span></div>
+          <div class="meta"><span class="price"><?= $s['count'] > 1 ? t('common.from') . ' ' : '' ?><?= money($s['min']) ?></span><span class="more"><?= t('home.card.more') ?> <?= icon('arrow') ?></span></div>
         </div>
       </a>
       <?php endforeach; ?>
@@ -73,10 +63,9 @@ require __DIR__ . '/inc/header.php';
     <div class="split-media reveal left">
       <div class="img-main" data-parallax="-0.02"><img src="<?= e(timg('home.about.img1')) ?>" alt="Upravené nohy po pedikúre" loading="lazy" decoding="async"></div>
       <div class="img-sec"><img src="<?= e(timg('home.about.img2')) ?>" alt="Pedikúra" loading="lazy" decoding="async"></div>
-      <div class="float-badge"><?= icon('heart') ?><div><b><?= t('home.about.badge') ?></b><small><?= t('home.about.badge2') ?></small></div></div>
     </div>
     <div class="reveal right">
-      <span class="kicker" style="font-family:var(--font-script);color:var(--rose-600);font-size:1.7rem"><?= t('home.about.kicker') ?></span>
+      <span class="kicker"><?= t('home.about.kicker') ?></span>
       <h2><?= t('home.about.title') ?></h2>
       <p><?= t('home.about.text') ?></p>
       <ul class="ticks">

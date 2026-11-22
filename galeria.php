@@ -1,7 +1,7 @@
 <?php
 $active = 'galeria';
 $title = 'Galéria';
-$desc = 'Fotogaléria prác PediSalónu ZK – pedikúra, brúsenie päty, mykóza, bradavice, špona.';
+$desc = 'Fotogaléria prác PediSalónu ZK – pedikúra, ošetrenie nechtov, kurie oká, špona.';
 require __DIR__ . '/inc/header.php';
 
 $G = gallery_data();

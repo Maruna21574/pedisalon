@@ -17,3 +17,9 @@ _t.html
 /assets/img/uploads/*
 !/assets/img/uploads/.htaccess
 /assets/img/t/uploads-*
+
+# Pôvodné (neoptimalizované) fotky a podklady – na web ide len spracovaná verzia
+/assets/img/noveFoto/
+/assets/img/fotky/
+/assets/img/certifikaty/*.png
+/assets/img/certifikaty/9160*.jpg

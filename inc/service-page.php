@@ -72,7 +72,7 @@ foreach ($P['services'] as $id) if (isset($C['services'][$id])) $svcs[] = [$id, 
       <?php foreach ($svcs as $k => [$id, $s]): ?>
         <?php if ($k): ?><hr style="border:0;border-top:1px dashed var(--sage-200);margin:24px 0"><?php endif; ?>
         <?php if (count($svcs) > 1): ?><b style="color:var(--sage-900)"><?= e($s['name']) ?></b><?php endif; ?>
-        <div class="price"><small><?= t('common.from') ?></small> <?= money($s['price']) ?></div>
+        <div class="price"><?= money($s['price']) ?></div>
         <ul>
           <li><?= icon('clock') ?> <?= e(str_replace('{min}', (int)$s['duration'], tx('svcpage.duration'))) ?></li>
           <li><?= icon('shield') ?> <?= t('svcpage.hygiene') ?></li>

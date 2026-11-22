@@ -67,13 +67,13 @@ Tešíme sa na Vás!
     'home.eyebrow'  => ['Malý nadpis nad titulkom', 'Salón pedikúry a ošetrenia chodidiel', 'text'],
     'home.h1'       => ['Hlavný titulok', 'Krásne a zdravé nohy', 'text'],
     'home.h1script' => ['Titulok – ozdobný riadok', 's láskou a precíznosťou', 'text'],
-    'home.lead'     => ['Úvodný odsek', 'V **{name}** sa o vaše chodidlá postaráme šetrne a profesionálne – od klasickej pedikúry cez brúsenie päty až po ošetrenie mykózy, kurích očí či vrastajúceho nechta.', 'area'],
+    'home.lead'     => ['Úvodný odsek', 'V **{name}** sa o vaše chodidlá postaráme šetrne a profesionálne – od pedikúry a lakovania cez ošetrenie nechtov a kurích očí až po špony na vrastajúci necht.', 'area'],
     'home.btn.services' => ['Druhé tlačidlo', 'Naše služby', 'text'],
     'home.badges'   => ['Tri odznaky pod tlačidlami (jeden riadok = jeden odznak)', "Dôraz na hygienu\nIndividuálny prístup\nOnline rezervácia 24/7", 'lines'],
     'home.hero.img' => ['Fotka v úvodnom oválnom okne', 'hero-detail.jpg', 'image'],
     'home.chip1'    => ['Bublina 1 pri fotke', 'Rezervácia online 24/7', 'text'],
     'home.chip2'    => ['Bublina 2 pri fotke', 'Šetrné ošetrenie', 'text'],
-    'home.marquee'  => ['Bežiaci pás so službami (jeden riadok = jedna položka)', "Pedikúra\nBrúsenie päty\nOšetrenie mykózy\nKurie oká a bradavice\nŠpona na vrastajúci necht\nGél lak", 'lines'],
+    'home.marquee'  => ['Bežiaci pás so službami (jeden riadok = jedna položka)', "Pedikúra suchá, mokrá, kombinovaná\nLakovanie Gellak a Lak Moyra\nOšetrenie nechtov\nKurie oká a otlaky\nReflexná masáž chodidiel\nŠpona Podofix", 'lines'],
   ],
   'Služby' => [
     'home.services.kicker' => ['Malý nadpis', 'Čo pre vás urobíme', 'text'],
@@ -109,7 +109,7 @@ Tešíme sa na Vás!
     'home.work.btn'     => ['Ukážky – tlačidlo', 'Celá galéria', 'text'],
     'home.faq.kicker'   => ['Otázky – malý nadpis', 'Máte otázky?', 'text'],
     'home.faq.title'    => ['Otázky – nadpis', 'Časté otázky', 'text'],
-    'faq.general'       => ['Časté otázky (jeden riadok = „Otázka | odpoveď“)', "Ako sa môžem objednať? | Najjednoduchšie cez online rezerváciu na tomto webe – vyberiete službu, deň a čas. Môžete nám aj zavolať.\nAko dlho trvá pedikúra? | Kompletná pedikúra trvá približne 60 minút, s gél lakom asi 80 minút. Presné trvanie každej služby nájdete v cenníku.\nČo mám priniesť so sebou? | Nič špeciálne. Pohodlnú obuv a ak chcete gél lak, stačí si vybrať odtieň u nás.\nMôžem prísť, ak mám plesňové ochorenie alebo ranky? | Áno, ale prosím upozornite nás vopred pri rezervácii. Pri akútnom zápale, hnisavých alebo nehojacich sa ranách vám odporúčame najskôr navštíviť lekára.\nAko zrušiť alebo zmeniť rezerváciu? | Zavolajte nám alebo napíšte e-mail, najlepšie aspoň 24 hodín vopred, aby sme termín mohli ponúknuť ďalším klientom.\nAko platím? | Platba prebieha priamo v salóne po ošetrení. Podrobnosti o platobných možnostiach vám radi povieme telefonicky.", 'pairs'],
+    'faq.general'       => ['Časté otázky (jeden riadok = „Otázka | odpoveď“)', "Ako sa môžem objednať? | Najjednoduchšie cez online rezerváciu na tomto webe – vyberiete službu, deň a čas. Môžete nám aj zavolať.\nAko dlho trvá pedikúra? | Pedikúra (suchá, mokrá aj kombinovaná) trvá približne 60 minút, pedikúra s lakom (Gellak alebo Lak Moyra) asi 90 minút. Trvanie ostatných služieb nájdete v cenníku.\nČo mám priniesť so sebou? | Nič špeciálne. Stačí pohodlná obuv, a ak chcete Gellak alebo Lak Moyra, odtieň si vyberiete u nás.\nMôžem prísť, ak mám plesňové ochorenie alebo ranky? | Áno, ale prosím upozornite nás vopred pri rezervácii. Pri akútnom zápale, hnisavých alebo nehojacich sa ranách vám odporúčame najskôr navštíviť lekára.\nAko zrušiť alebo zmeniť rezerváciu? | Zavolajte nám alebo napíšte e-mail, najlepšie aspoň 24 hodín vopred, aby sme termín mohli ponúknuť ďalším klientom.\nAko platím? | Platba prebieha priamo v salóne po ošetrení. Podrobnosti o platobných možnostiach vám radi povieme telefonicky.", 'pairs'],
   ],
 ],
 
@@ -123,7 +123,7 @@ Tešíme sa na Vás!
     'about.title'      => ['Nadpis', 'Vitajte v PediSalóne ZK', 'text'],
     'about.body'       => ['Text (odseky oddeľte prázdnym riadkom)', "Náš salón vznikol z jednoduchého presvedčenia: **nohy si zaslúžia rovnakú starostlivosť ako tvár či ruky**. Venujeme sa nielen estetickej pedikúre, ale aj problémom, s ktorými sa ľudia často boja ísť – mozole, kurie oká, zhrubnuté nechty alebo vrastajúci necht.\n\nLogo salóna – chodidlo so srdiečkom a lístkami – vyjadruje naše hodnoty: **láska** k práci, **prírodná** šetrnosť a **precíznosť** v každom detaile.\n\nPracujeme v pokojnom, čistom prostredí. Pri každej návšteve si vyhradíme čas, aby sme sa mohli venovať práve vám.", 'rich'],
     'about.btn'        => ['Tlačidlo', 'Objednať sa', 'text'],
-    'about.img'        => ['Vaša fotka pri texte (kým nevyberiete fotku, zobrazuje sa zástupný rámik „Vaša fotka“)', '', 'image'],
+    'about.img'        => ['Vaša fotka pri texte (kým nevyberiete fotku, zobrazuje sa zástupný rámik „Vaša fotka“)', 'majitelka-portret.jpg', 'image'],
   ],
   'Hodnoty' => [
     'about.values.kicker' => ['Malý nadpis', 'Naše hodnoty', 'text'],
@@ -143,7 +143,14 @@ Tešíme sa na Vás!
     'premises.body'   => ['Text (odseky oddeľte prázdnym riadkom)', "Náš salón sme zariadili tak, aby ste sa v ňom cítili pohodlne od prvej minúty. Pracujeme v pokojnom a upratanom prostredí, kde máte dostatok súkromia aj času.
 
 Každé pracovisko dezinfikujeme a používame čisté pomôcky, aby ste sa mohli uvoľniť a vychutnať si starostlivosť o svoje nohy.", 'rich'],
-    'premises.photos' => ['Fotky prevádzky (kým nevyberiete fotky, zobrazujú sa zástupné rámiky)', '', 'photos'],
+    'premises.photos' => ['Fotky prevádzky (kým nevyberiete fotky, zobrazujú sa zástupné rámiky)', "salon-pracovisko-1.jpg
+salon-cakaren.jpg
+salon-pracovisko-2.jpg
+salon-miestnost.jpg
+salon-sterilizacia.jpg
+salon-vybavenie.jpg
+salon-ulica.jpg
+salon-vchod.jpg", 'photos'],
   ],
   'Čo vás čaká' => [
     'premises.features.title' => ['Nadpis', 'Čo vás u nás čaká', 'text'],
@@ -168,8 +175,8 @@ Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľat
   ],
   'Stránka Cenník' => [
     'cennik.hero.title' => ['Nadpis stránky', 'Cenník', 'text'],
-    'cennik.hero.lead'  => ['Podtitulok', 'Transparentné ceny bez skrytých poplatkov. Konečná cena sa môže mierne líšiť podľa rozsahu ošetrenia.', 'text'],
-    'cennik.note'       => ['Poznámka pod cenami', 'Ceny sú orientačné. Presnú cenu vám povieme po prezretí chodidiel. Platba prebieha v salóne po ošetrení.', 'area'],
+    'cennik.hero.lead'  => ['Podtitulok', 'Prehľadné ceny podľa cenníka platného od 1. 4. 2026. Ošetrenie nechtu popri pedikúre je výrazne lacnejšie.', 'text'],
+    'cennik.note'       => ['Poznámka pod cenami', 'Ceny platia od 1. 4. 2026. Platba prebieha v salóne po ošetrení.', 'area'],
     'cennik.btn'        => ['Tlačidlo', 'Objednať sa online', 'text'],
   ],
   'Podstránky služieb (spoločné nadpisy)' => [

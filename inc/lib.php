@@ -265,6 +265,45 @@ function service_menu(): array {
     return array_values($out);
 }
 
+/** Krátky identifikátor kategórie pre filter (bez diakritiky). */
+function cat_slug(string $c): string {
+    $c = strtr(mb_strtolower($c), ['á'=>'a','ä'=>'a','č'=>'c','ď'=>'d','é'=>'e','í'=>'i','ĺ'=>'l','ľ'=>'l','ň'=>'n','ó'=>'o','ô'=>'o','ŕ'=>'r','š'=>'s','ť'=>'t','ú'=>'u','ý'=>'y','ž'=>'z']);
+    return trim(preg_replace('~[^a-z0-9]+~', '-', $c), '-');
+}
+
+/** Služby podľa kategórií (v poradí prvého výskytu): [názov kategórie => [id => služba, ...]]. Služby bez kategórie idú do „Ostatné“. */
+function service_categories(): array {
+    $out = [];
+    foreach (cfg()['services'] as $id => $s) {
+        $c = trim((string)($s['category'] ?? '')) ?: 'Ostatné';
+        $out[$c][(string)$id] = $s;
+    }
+    return $out;
+}
+
+/**
+ * Služby zoskupené podľa podstránky (karty na úvode a v prehľade služieb):
+ * page => ['page','name','short','img','icon','min','count','ids'].
+ */
+function service_groups(): array {
+    $out = [];
+    foreach (cfg()['services'] as $id => $s) {
+        $p = (string)$s['page'];
+        if (!isset($out[$p])) $out[$p] = ['page' => $p, 'first' => (string)$id, 'name' => $s['name'], 'short' => $s['short'], 'img' => $s['img'], 'icon' => $s['icon'], 'min' => (float)$s['price'], 'count' => 0, 'ids' => []];
+        $out[$p]['min'] = min($out[$p]['min'], (float)$s['price']);
+        $out[$p]['count']++;
+        $out[$p]['ids'][] = (string)$id;
+    }
+    foreach ($out as $p => $g) {
+        if ($g['count'] > 1) {   // podstránka s viac službami: názov a popis berieme z podstránky
+            $P = page_content(page_key($g['first'], cfg()['services'][$g['first']]));
+            $out[$p]['name'] = $P['title'];
+            $out[$p]['short'] = $P['lead'];
+        }
+    }
+    return $out;
+}
+
 /** Podstránky služieb: kľúč => ['label', 'services' => [id, ...]]. */
 function service_pages(): array {
     $out = [];
@@ -298,7 +337,7 @@ function page_content(string $key): array {
 function gallery_data(): array {
     $g = store_read(GALLERY_FILE);
     if (isset($g['items'], $g['cats'])) return $g;
-    $cats = ['pedikura' => ['Pedikúra', 10], 'brusenie' => ['Brúsenie päty', 4], 'mykoza' => ['Mykóza', 2], 'bradavice' => ['Bradavice a kurie oká', 4], 'spona' => ['Špona', 6]];
+    $cats = ['pedikura' => ['Pedikúra', 10], 'brusenie' => ['Pedikúra – päty', 4], 'mykoza' => ['Ošetrenie nechtov', 2], 'bradavice' => ['Kurie oká a otlaky', 4], 'spona' => ['Špona', 6]];
     $home = ['pedikura-2', 'pedikura-5', 'brusenie-2', 'pedikura-8', 'spona-4', 'pedikura-10', 'bradavice-2', 'pedikura-3', 'mykoza-1', 'pedikura-7', 'spona-1', 'pedikura-9'];
     $items = [];
     for ($i = 1, $max = max(array_column($cats, 1)); $i <= $max; $i++)
@@ -325,7 +364,7 @@ define('REVIEWS_FILE', DATA_DIR . '/reviews.json');
 function reviews_data(): array {
     $d = store_read(REVIEWS_FILE);
     if (isset($d['items'])) return $d + ['enabled' => false, 'url' => '', 'rating' => '', 'count' => ''];
-    return ['enabled' => true, 'demo' => true, 'url' => '', 'rating' => '', 'count' => '', 'items' => [
+    return ['enabled' => false, 'demo' => true, 'url' => '', 'rating' => '', 'count' => '', 'items' => [
         ['name' => 'Testovacia recenzia 1', 'stars' => 5, 'when' => 'pred mesiacom', 'text' => 'TESTOVACÍ TEXT – nahraďte skutočnou recenziou z Google. Takto bude vyzerať karta s recenziou klienta, vrátane hviezdičiek a loga Google.'],
         ['name' => 'Testovacia recenzia 2', 'stars' => 5, 'when' => 'pred 2 mesiacmi', 'text' => 'TESTOVACÍ TEXT – sem patrí skutočné hodnotenie z vášho Google profilu, skopírované tak, ako ho klient napísal.'],
         ['name' => 'Testovacia recenzia 3', 'stars' => 4, 'when' => 'pred 3 mesiacmi', 'text' => 'TESTOVACÍ TEXT – recenzie upravíte alebo zmažete v administrácii v sekcii Recenzie.'],

@@ -35,7 +35,7 @@ admin_head('Recenzie z Google', 'recenzie', '', 'Slider s recenziami na úvodnej
 <div class="alert bad" style="background:#fff7e0;border-color:#f0d58a;color:#7a5a00">
   <b>Zverejňujte len skutočné recenzie.</b> Vymyslené alebo upravené hodnotenia pod značkou Google sú klamlivé a podľa spotrebiteľského práva (EÚ aj SR) zakázané.
   Skopírujte recenzie zo svojho Google profilu tak, ako ich klienti napísali.
-  <?php if ($demo): ?><br>Zatiaľ sú tu len <b>testovacie texty</b> a sekcia sa na webe <b>zobrazuje</b>. Pred spustením ich nahraďte skutočnými recenziami.<?php endif; ?>
+  <?php if ($demo): ?><br>Zatiaľ sú tu len <b>testovacie texty</b> a sekcia je na webe <b>skrytá</b>. Nahraďte ich skutočnými recenziami z Google a zapnite zobrazenie.<?php endif; ?>
 </div>
 
 <form method="post">

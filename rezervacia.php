@@ -35,12 +35,15 @@ foreach ($C['services'] as $id => $s) $svcData[$id] = ['name' => $s['name'], 'du
       <div class="bk-step" data-step="1">
         <h2><?= t('rez.h.service') ?></h2>
         <div class="svc-pick" id="svcPick">
-          <?php foreach ($C['services'] as $id => $s): ?>
+          <?php foreach (service_categories() as $cat => $items): ?>
+          <h3 class="svc-cat"><?= e($cat) ?></h3>
+          <?php foreach ($items as $id => $s): ?>
           <button type="button" class="svc-opt" data-id="<?= e($id) ?>">
             <img src="<?= e(img_thumb($s['img'])) ?>" alt="" loading="lazy" decoding="async">
             <span><b><?= e($s['name']) ?></b><small><?= (int)$s['duration'] ?> <?= t('common.min') ?></small></span>
             <span class="p"><?= money($s['price']) ?></span>
           </button>
+          <?php endforeach; ?>
           <?php endforeach; ?>
         </div>
       </div>

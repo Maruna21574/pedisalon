@@ -25,7 +25,7 @@ function read_service(array $in, array $base, array $upload): array {
     // $base nesie nezmenené polia (napr. 'page'), ktoré formulár needituje
     return [array_merge($base, [
         'name' => $name, 'short' => trim((string)($in['short'] ?? '')), 'duration' => $dur, 'price' => $price,
-        'menu' => trim((string)($in['menu'] ?? '')) ?: $name, 'img' => $img, 'icon' => $icon,
+        'menu' => trim((string)($in['menu'] ?? '')) ?: $name, 'category' => trim((string)($in['category'] ?? '')), 'img' => $img, 'icon' => $icon,
     ]), ''];
 }
 
@@ -109,7 +109,8 @@ admin_head($isNew ? 'Nová služba' : 'Služba: ' . $svc['name'], 'sluzby', '', 
     <div class="grid-form">
       <div class="field"><label>Názov služby</label><input name="s[name]" value="<?= e($svc['name']) ?>" required></div>
       <div class="field"><label>Názov v menu a pätičke</label><input name="s[menu]" value="<?= e($svc['menu'] ?? $svc['name']) ?>"><small class="help">Kratší názov. Prázdne = celý názov.</small></div>
-      <div class="field"><label>Cena od (€)</label><input name="s[price]" value="<?= e(rtrim(rtrim(number_format((float)$svc['price'], 2, ',', ''), '0'), ',')) ?>" inputmode="decimal" required></div>
+      <div class="field"><label>Kategória</label><input name="s[category]" value="<?= e($svc['category'] ?? '') ?>" list="catList" placeholder="napr. Pedikúra"><datalist id="catList"><?php foreach (array_keys(service_categories()) as $cn): ?><option value="<?= e($cn) ?>"><?php endforeach; ?></datalist><small class="help">Služby s rovnakou kategóriou sa v cenníku a rezervácii zobrazia pod spoločným nadpisom.</small></div>
+      <div class="field"><label>Cena (€)</label><input name="s[price]" value="<?= e(rtrim(rtrim(number_format((float)$svc['price'], 2, ',', ''), '0'), ',')) ?>" inputmode="decimal" required></div>
       <div class="field"><label>Trvanie (minúty)</label><input type="number" name="s[duration]" value="<?= (int)$svc['duration'] ?>" min="5" max="480" step="5" required><small class="help">Podľa trvania sa ponúkajú voľné termíny.</small></div>
       <div class="field"><label>Ikona na karte</label><select name="s[icon]"><?php foreach (ICONS as $ik => $il): ?><option value="<?= $ik ?>" <?= ($svc['icon'] ?? '') === $ik ? 'selected' : '' ?>><?= e($il) ?></option><?php endforeach; ?></select></div>
     </div>

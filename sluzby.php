@@ -1,7 +1,7 @@
 <?php
 $active = 'sluzby';
 $title = 'Služby';
-$desc = 'Prehľad služieb PediSalónu ZK: pedikúra, gél lak, brúsenie päty, ošetrenie mykózy, bradavíc a kurích očí, špona na vrastajúci necht.';
+$desc = 'Prehľad služieb PediSalónu ZK: pedikúra a lakovanie (Gellak, Lak Moyra), ošetrenie nechtov, kurie oká a otlaky, reflexná masáž chodidiel, špona na vrastajúci necht.';
 require __DIR__ . '/inc/header.php';
 ?>
 <section class="page-hero">
@@ -16,13 +16,13 @@ require __DIR__ . '/inc/header.php';
 <section class="section">
   <div class="wrap">
     <div class="cards">
-      <?php foreach ($C['services'] as $id => $s): ?>
+      <?php foreach (service_groups() as $s): ?>
       <a class="card" href="<?= e($s['page']) ?>">
         <div class="thumb"><img src="<?= e(img_thumb($s['img'])) ?>" alt="<?= e($s['name']) ?>" loading="lazy" decoding="async"><div class="badge-ico"><?= icon($s['icon']) ?></div></div>
         <div class="body">
           <h3><?= e($s['name']) ?></h3>
           <p><?= e($s['short']) ?></p>
-          <div class="meta"><span class="price"><?= t('common.from') ?> <?= money($s['price']) ?> · <?= (int)$s['duration'] ?> <?= t('common.min') ?></span><span class="more"><?= t('sluzby.card.more') ?> <?= icon('arrow') ?></span></div>
+          <div class="meta"><span class="price"><?= $s['count'] > 1 ? t('common.from') . ' ' : '' ?><?= money($s['min']) ?></span><span class="more"><?= t('sluzby.card.more') ?> <?= icon('arrow') ?></span></div>
         </div>
       </a>
       <?php endforeach; ?>
