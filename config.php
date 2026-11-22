@@ -19,7 +19,7 @@ return [
         'city'      => 'Handlová',
         'facebook'  => 'https://www.facebook.com/972049906001172/',
         'instagram' => 'https://www.instagram.com/pedisalonzk/',
-        'url'       => 'https://pedisalonzk.sk',   // adresa webu (pre náhľad pri zdieľaní na sociálnych sieťach)
+        'url'       => '',   // adresa webu pre náhľad pri zdieľaní; prázdne = zistí sa z aktuálnej domény (napr. https://pedisalonzk.sk)
         'maps_embed'=> 'https://www.google.com/maps?q=N%C3%A1m.+ban%C3%ADkov+2%2C+972+51+Handlov%C3%A1%2C+Slovakia&output=embed',   // adresu mapy zmeníte v administrácii (Nastavenia)
         'ico'       => 'IČO: 41600673',   // IČO / fakturačné údaje (voliteľné, zobrazí sa v pätičke)
     ],
