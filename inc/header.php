@@ -4,7 +4,7 @@ $C = cfg(); $S = $C['salon'];
 // Pekné URL: odkazy na hlavné stránky bez „.php“ (/galeria namiesto /galeria.php); pravidlá sú v .htaccess
 ob_start(fn(string $html) => preg_replace(['~href="index\.php"~', '~(href|action)="(?!https?:|/|\.\.)([a-z0-9-]+)\.php(?=[?#"])~i'], ['href="./"', '$1="$2'], $html));
 $pageTitle = isset($title) ? $title . ' | ' . $S['name'] : $S['name'] . ' – ' . $S['tagline'];
-$pageDesc  = $desc ?? 'Profesionálna pedikúra, brúsenie päty, ošetrenie mykózy, bradavíc a vrastajúcich nechtov. Objednajte sa online v PediSalóne ZK.';
+$pageDesc  = $desc ?? 'Profesionálna pedikúra, lakovanie Gellak, ošetrenie nechtov, kurích očí a vrastajúcich nechtov, reflexná masáž chodidiel. Objednajte sa online v PediSalóne ZK.';
 $active = $active ?? '';
 $isHome = ($active === 'home');
 
@@ -36,13 +36,14 @@ $nav = [
     ['sluzby', 'sluzby.php',    tx('nav.services')],
     ['cennik', 'cennik.php',    tx('nav.pricing')],
     ['galeria','galeria.php',   tx('nav.gallery')],
+    ['poradna','poradna.php',   'Poradňa'],
     ['onas',   'o-nas.php',     tx('nav.about')],
     ['kontakt','kontakt.php',   tx('nav.contact')],
 ];
 $serviceMenu = service_menu();   // podľa služieb nastavených v administrácii
 $brandParts = explode(' ', $S['name'], 2);
 // Položka „Služby“ je aktívna na všetkých podstránkach služieb
-$servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'onas', 'kontakt', 'rezervacia'], true);
+$servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'poradna', 'onas', 'kontakt', 'rezervacia'], true);
 ?><!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -59,9 +60,9 @@ $servicesActive = !in_array($active, ['', 'home', 'cennik', 'galeria', 'onas', '
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Písma sa načítavajú bez blokovania vykresľovania stránky -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Quicksand:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Quicksand:wght@400;500;600;700&display=swap"></noscript>
-<link rel="stylesheet" href="assets/css/style.css?v=14">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Manrope:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@600&family=Manrope:wght@600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/style.css?v=31">
 <script type="application/ld+json">
 <?= json_encode([
     '@context' => 'https://schema.org', '@type' => 'HealthAndBeautyBusiness',

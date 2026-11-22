@@ -33,6 +33,7 @@
         <li><a href="o-nas.php"><?= t('nav.about') ?></a></li>
         <li><a href="prevadzka.php"><?= t('nav.premises') ?></a></li>
         <li><a href="galeria.php"><?= t('nav.gallery') ?></a></li>
+        <li><a href="poradna.php">Poradňa</a></li>
         <li><a href="rezervacia.php"><?= t('footer.l.booking') ?></a></li>
         <li><a href="kontakt.php"><?= t('nav.contact') ?></a></li>
         <li><a href="ochrana-udajov.php"><?= t('footer.l.privacy') ?></a></li>
@@ -57,7 +58,7 @@
 <a href="rezervacia.php" class="fab" aria-label="<?= e(tx('nav.book')) ?>"><?= icon('clock') ?><span><?= t('fab.book') ?></span></a>
 
 <canvas id="petals" aria-hidden="true"></canvas>
-<script src="assets/js/hero.js?v=1" defer></script>
+<script src="assets/js/hero.js?v=3" defer></script>
 <script src="assets/js/main.js?v=4" defer></script>
 <?php if (!empty($extraJs)) foreach ($extraJs as $js): ?>
 <script src="<?= e($js) ?>" defer></script>
