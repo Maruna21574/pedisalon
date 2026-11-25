@@ -806,3 +806,22 @@ body:not(.admin-body) .brand-text{font-family:var(--font-display)}
 @media (max-width:900px){
   .hero-visual{order:0;margin:30px auto 0}
 }
+
+/* Nižšie úvodné sekcie (hero) – kompaktnejšie na počítači aj na mobile */
+.hero{min-height:0;padding:112px 0 52px}
+.page-hero{padding:116px 0 40px}
+.page-hero p{margin-bottom:0}
+.hero-actions{margin:1.4em 0 .4em}
+@media (max-width:900px){
+  .hero{padding:86px 0 28px}
+  .hero-visual{max-width:420px;aspect-ratio:4/3;margin:22px auto 0}
+  .page-hero{padding:92px 0 26px}
+  body:not(.admin-body) .hero h1{font-size:clamp(2.7rem,12vw,3.6rem)}
+  body:not(.admin-body) .page-hero h1{font-size:clamp(2.5rem,11vw,3.3rem)}
+  .page-hero .crumbs{margin-bottom:.4em}
+  .hero p.lead{font-size:1.02rem;margin-bottom:0}
+  .hero-actions{margin:1.1em 0 0}
+  .section{padding:52px 0}
+  .sec-head{margin-bottom:34px}
+}
+@media (max-width:900px){.medal{width:24%;left:-4px;bottom:-12px;border-width:4px}}
