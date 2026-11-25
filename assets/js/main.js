@@ -166,7 +166,7 @@
       const r = await fetch('api/contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       const j = await r.json();
       msg.className = 'alert ' + (j.ok ? 'ok' : 'bad');
-      msg.textContent = j.ok ? (cf.dataset.ok || 'Ďakujeme, správu sme prijali.') : (j.error || 'Správu sa nepodarilo odoslať.');
+      msg.textContent = j.ok ? (cf.dataset.ok || 'Ďakujem, správu som prijala.') : (j.error || 'Správu sa nepodarilo odoslať.');
       if (j.ok) cf.reset();
     } catch (err) { msg.className = 'alert bad'; msg.textContent = 'Chyba spojenia. Skúste to prosím znova.'; }
     btn.disabled = false;

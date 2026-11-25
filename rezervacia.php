@@ -3,7 +3,7 @@ $active = 'rezervacia';
 $title = 'Online rezervácia';
 $desc = 'Objednajte sa online do PediSalónu ZK – vyberte službu, dátum a čas za pár sekúnd.';
 $bodyClass = 'on-booking';
-$extraJs = ['assets/js/booking.js?v=2'];
+$extraJs = ['assets/js/booking.js?v=3'];
 require __DIR__ . '/inc/header.php';
 $svcData = [];
 foreach ($C['services'] as $id => $s) $svcData[$id] = ['name' => $s['name'], 'duration' => $s['duration'], 'price' => $s['price'], 'img' => img_thumb($s['img']), 'short' => $s['short']];

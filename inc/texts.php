@@ -15,9 +15,9 @@ return [
     'nav.services' => ['Menu – Služby', 'Služby', 'text'],
     'nav.pricing'  => ['Menu – Cenník', 'Cenník', 'text'],
     'nav.gallery'  => ['Menu – Galéria', 'Galéria', 'text'],
-    'nav.about'    => ['Menu – O nás', 'O nás', 'text'],
-    'nav.about.sub' => ['Menu O nás – 1. položka rozbaľovacieho menu', 'Náš príbeh', 'text'],
-    'nav.premises' => ['Menu O nás – 2. položka (stránka Prevádzka)', 'Prevádzka', 'text'],
+    'nav.about'    => ['Menu – O mne', 'O mne', 'text'],
+    'nav.about.sub' => ['Menu O mne – 1. položka rozbaľovacieho menu', 'Môj príbeh', 'text'],
+    'nav.premises' => ['Menu O mne – 2. položka (stránka Prevádzka)', 'Prevádzka', 'text'],
     'nav.contact'  => ['Menu – Kontakt', 'Kontakt', 'text'],
     'nav.book'     => ['Tlačidlo „Rezervovať termín“ (menu aj ostatné tlačidlá)', 'Rezervovať termín', 'text'],
     'nav.allservices' => ['Menu služieb – posledný odkaz', 'Všetky služby →', 'text'],
@@ -41,9 +41,9 @@ return [
     'footer.legal'      => ['Upozornenie dole', 'Informácie na webe majú informatívny charakter a nenahrádzajú lekárske vyšetrenie.', 'text'],
   ],
   'E-maily zákazníkom' => [
-    'mail.confirmed' => ['E-mail po potvrdení rezervácie. Značky: {client} meno, {service} služba, {when} termín, {name}, {phone}', "Dobrý deň {client},\n\nVaša rezervácia ({service}, {when}) je potvrdená. Tešíme sa na Vás!\n\n{name}", 'rich'],
-    'mail.received' => ['E-mail hneď po odoslaní rezervácie (úvodný text; kartu s termínom a tlačidlo doplní systém). Značky: {client}, {service}, {when}, {address}, {phone}, {name}, {status}', "Dobrý deň {client},\n\nďakujeme za Vašu rezerváciu v salóne {name}.\n\n{status}\n\nAk potrebujete termín zmeniť alebo zrušiť, zavolajte na {phone}.\n\nTešíme sa na Vás!", 'rich'],
-    'mail.reminder' => ['E-mail s pripomienkou termínu (deň vopred; zapína sa v Nastaveniach). Značky ako vyššie', "Dobrý deň {client},\n\nPripomíname Váš zajtrajší termín v salóne {name}.\n\nAk sa Vám termín nehodí, prosíme, zavolajte nám na {phone}.\n\nTešíme sa na Vás!", 'rich'],
+    'mail.confirmed' => ['E-mail po potvrdení rezervácie. Značky: {client} meno, {service} služba, {when} termín, {name}, {phone}', "Dobrý deň {client},\n\nVaša rezervácia ({service}, {when}) je potvrdená. Teším sa na Vás!\n\n{name}", 'rich'],
+    'mail.received' => ['E-mail hneď po odoslaní rezervácie (úvodný text; kartu s termínom a tlačidlo doplní systém). Značky: {client}, {service}, {when}, {address}, {phone}, {name}, {status}', "Dobrý deň {client},\n\nďakujem za Vašu rezerváciu v salóne {name}.\n\n{status}\n\nAk potrebujete termín zmeniť alebo zrušiť, zavolajte na {phone}.\n\nTeším sa na Vás!", 'rich'],
+    'mail.reminder' => ['E-mail s pripomienkou termínu (deň vopred; zapína sa v Nastaveniach). Značky ako vyššie', "Dobrý deň {client},\n\nPripomínam Váš zajtrajší termín v salóne {name}.\n\nAk sa Vám termín nehodí, prosím, zavolajte mi na {phone}.\n\nTeším sa na Vás!", 'rich'],
     'mail.subject.received' => ['Predmet e-mailu po odoslaní rezervácie', 'Rezervácia prijatá – {name}', 'text'],
     'mail.subject.confirmed' => ['Predmet e-mailu po potvrdení rezervácie', 'Rezervácia potvrdená – {name}', 'text'],
     'mail.subject.cancelled' => ['Predmet e-mailu po zrušení rezervácie', 'Rezervácia zrušená – {name}', 'text'],
@@ -51,9 +51,9 @@ return [
     'mail.cta.call' => ['Tlačidlo v e-maile – zavolať (za text sa pridá číslo)', 'Zavolať', 'text'],
     'mail.cta.web' => ['Tlačidlo v e-maile po zrušení – nový termín', 'Objednať nový termín', 'text'],
     'mail.footer' => ['Drobný text v päte každého e-mailu', 'Táto správa bola odoslaná automaticky z webu salónu.', 'text'],
-    'mail.status.pending' => ['{status} v e-maile – rezervácia čaká na potvrdenie', 'Rezerváciu Vám čoskoro potvrdíme telefonicky alebo e-mailom.', 'text'],
+    'mail.status.pending' => ['{status} v e-maile – rezervácia čaká na potvrdenie', 'Rezerváciu Vám čoskoro potvrdím telefonicky alebo e-mailom.', 'text'],
     'mail.status.confirmed' => ['{status} v e-maile – rezervácia je rovno potvrdená', 'Rezervácia je potvrdená.', 'text'],
-    'mail.cancelled' => ['E-mail po zrušení rezervácie (rovnaké značky)', "Dobrý deň {client},\n\nVaša rezervácia ({service}, {when}) bola zrušená. Ak si želáte nový termín, objednajte sa na webe alebo nám zavolajte na {phone}.\n\n{name}", 'rich'],
+    'mail.cancelled' => ['E-mail po zrušení rezervácie (rovnaké značky)', "Dobrý deň {client},\n\nVaša rezervácia ({service}, {when}) bola zrušená. Ak si želáte nový termín, objednajte sa na webe alebo mi zavolajte na {phone}.\n\n{name}", 'rich'],
   ],
   'E-maily pre majiteľku' => [
     'mail.admin.new.subject' => ['Predmet e-mailu o novej rezervácii. Značky: {client}, {service}, {when}, {status}', 'Nová rezervácia – {client}, {when}', 'text'],
@@ -68,8 +68,8 @@ return [
     'home.eyebrow'  => ['Malý nadpis nad titulkom', 'Salón pedikúry a ošetrenia chodidiel', 'text'],
     'home.h1'       => ['Hlavný titulok', 'Krásne a zdravé nohy', 'text'],
     'home.h1script' => ['Titulok – ozdobný riadok', 's láskou a precíznosťou', 'text'],
-    'home.lead'     => ['Úvodný odsek', 'V **{name}** sa o vaše chodidlá postaráme šetrne a profesionálne – od pedikúry a lakovania cez ošetrenie nechtov a kurích očí až po špony na vrastajúci necht.', 'area'],
-    'home.btn.services' => ['Druhé tlačidlo', 'Naše služby', 'text'],
+    'home.lead'     => ['Úvodný odsek', 'V **{name}** sa o vaše chodidlá postarám šetrne a profesionálne – od pedikúry a lakovania cez ošetrenie nechtov a kurích očí až po špony na vrastajúci necht.', 'area'],
+    'home.btn.services' => ['Druhé tlačidlo', 'Moje služby', 'text'],
     'home.badges'   => ['Tri odznaky pod tlačidlami (jeden riadok = jeden odznak)', "Dôraz na hygienu\nIndividuálny prístup\nOnline rezervácia 24/7", 'lines'],
     'home.hero.img' => ['Fotka v úvodnom oválnom okne', 'hero-detail.jpg', 'image'],
     'home.chip1'    => ['Bublina 1 pri fotke', 'Rezervácia online 24/7', 'text'],
@@ -77,8 +77,8 @@ return [
     'home.marquee'  => ['Bežiaci pás so službami (jeden riadok = jedna položka)', "Pedikúra suchá, mokrá, kombinovaná\nLakovanie Gellak a Lak Moyra\nOšetrenie nechtov\nKurie oká a otlaky\nReflexná masáž chodidiel\nŠpona Podofix", 'lines'],
   ],
   'Služby' => [
-    'home.services.kicker' => ['Malý nadpis', 'Čo pre vás urobíme', 'text'],
-    'home.services.title'  => ['Nadpis', 'Naše služby', 'text'],
+    'home.services.kicker' => ['Malý nadpis', 'Čo pre vás urobím', 'text'],
+    'home.services.title'  => ['Nadpis', 'Moje služby', 'text'],
     'home.services.text'   => ['Popis', 'Od relaxačnej pedikúry po ošetrenie problémových chodidiel. Vyberte si, čo vaše nohy potrebujú.', 'area'],
     'home.card.more'       => ['Odkaz na kartách služieb', 'Zistiť viac', 'text'],
     'home.prices.btn'      => ['Tlačidlo pod kartami', 'Pozrieť celý cenník', 'text'],
@@ -86,9 +86,9 @@ return [
   'O salóne' => [
     'home.about.kicker' => ['Malý nadpis', 'O salóne', 'text'],
     'home.about.title'  => ['Nadpis', 'Starostlivosť, ktorú vaše nohy ocenia', 'text'],
-    'home.about.text'   => ['Text', 'Nohy nás nesú celý deň – zaslúžia si pozornosť. V našom salóne sa venujeme estetickej aj problémovej pedikúre. Každé ošetrenie začíname krátkou konzultáciou, aby sme zvolili postup šetrný práve pre vás.', 'area'],
+    'home.about.text'   => ['Text', 'Nohy nás nesú celý deň – zaslúžia si pozornosť. V mojom salóne sa venujem estetickej aj problémovej pedikúre. Každé ošetrenie začínam krátkou konzultáciou, aby som zvolila postup šetrný práve pre vás.', 'area'],
     'home.about.ticks'  => ['Odrážky (jeden riadok = jedna odrážka)', "Šetrné postupy a kvalitná kozmetika\nČisté pomôcky a príjemné prostredie\nPoradenstvo ako sa starať o nohy doma\nPohodlné objednanie online", 'lines'],
-    'home.about.btn'    => ['Tlačidlo', 'Viac o nás', 'text'],
+    'home.about.btn'    => ['Tlačidlo', 'Viac o mne', 'text'],
     'home.about.img1'   => ['Veľká fotka', 'pedikura-6.jpg', 'image'],
     'home.about.img2'   => ['Malá fotka', 'pedikura-9.jpg', 'image'],
     'home.about.badge'  => ['Odznak na fotke – nadpis', 'S láskou', 'text'],
@@ -97,7 +97,7 @@ return [
   'Ako to prebieha' => [
     'home.flow.kicker'  => ['Malý nadpis', 'Ako to prebieha', 'text'],
     'home.flow.title'   => ['Nadpis', 'Štyri jednoduché kroky k zdravším nohám', 'text'],
-    'home.flow.steps'   => ['Kroky (jeden riadok = „Nadpis | text“)', "Rezervácia | Vyberiete si službu a voľný termín v online kalendári.\nKonzultácia | Pozrieme sa na stav chodidiel a dohodneme vhodný postup.\nOšetrenie | Starostlivo a šetrne sa postaráme o vaše nohy.\nRady domov | Dostanete tipy, ako výsledok udržať čo najdlhšie.", 'pairs'],
+    'home.flow.steps'   => ['Kroky (jeden riadok = „Nadpis | text“)', "Rezervácia | Vyberiete si službu a voľný termín v online kalendári.\nKonzultácia | Pozriem sa na stav chodidiel a dohodneme sa na vhodnom postupe.\nOšetrenie | Starostlivo a šetrne sa postarám o vaše nohy.\nRady domov | Dostanete tipy, ako výsledok udržať čo najdlhšie.", 'pairs'],
   ],
   'Recenzie z Google' => [
     'home.reviews.kicker' => ['Malý nadpis', 'Čo hovoria klienti', 'text'],
@@ -105,43 +105,43 @@ return [
     'home.reviews.cta'    => ['Tlačidlo „Zobraziť všetky recenzie“', 'Zobraziť všetky recenzie', 'text'],
   ],
   'Ukážky prác a otázky' => [
-    'home.work.kicker'  => ['Ukážky – malý nadpis', 'Z nášho salónu', 'text'],
-    'home.work.title'   => ['Ukážky – nadpis (fotky určíte v sekcii Galéria)', 'Ukážky našej práce', 'text'],
+    'home.work.kicker'  => ['Ukážky – malý nadpis', 'Z môjho salónu', 'text'],
+    'home.work.title'   => ['Ukážky – nadpis (fotky určíte v sekcii Galéria)', 'Ukážky mojej práce', 'text'],
     'home.work.btn'     => ['Ukážky – tlačidlo', 'Celá galéria', 'text'],
     'home.faq.kicker'   => ['Otázky – malý nadpis', 'Máte otázky?', 'text'],
     'home.faq.title'    => ['Otázky – nadpis', 'Časté otázky', 'text'],
-    'faq.general'       => ['Časté otázky (jeden riadok = „Otázka | odpoveď“)', "Ako sa môžem objednať? | Najjednoduchšie cez online rezerváciu na tomto webe – vyberiete službu, deň a čas. Môžete nám aj zavolať.\nAko dlho trvá pedikúra? | Pedikúra (suchá, mokrá aj kombinovaná) trvá približne 60 minút, pedikúra s lakom (Gellak alebo Lak Moyra) asi 90 minút. Trvanie ostatných služieb nájdete v cenníku.\nČo mám priniesť so sebou? | Nič špeciálne. Stačí pohodlná obuv, a ak chcete Gellak alebo Lak Moyra, odtieň si vyberiete u nás.\nMôžem prísť, ak mám plesňové ochorenie alebo ranky? | Áno, ale prosím upozornite nás vopred pri rezervácii. Pri akútnom zápale, hnisavých alebo nehojacich sa ranách vám odporúčame najskôr navštíviť lekára.\nAko zrušiť alebo zmeniť rezerváciu? | Zavolajte nám alebo napíšte e-mail, najlepšie aspoň 24 hodín vopred, aby sme termín mohli ponúknuť ďalším klientom.\nAko platím? | Platba prebieha priamo v salóne po ošetrení. Podrobnosti o platobných možnostiach vám radi povieme telefonicky.", 'pairs'],
+    'faq.general'       => ['Časté otázky (jeden riadok = „Otázka | odpoveď“)', "Ako sa môžem objednať? | Najjednoduchšie cez online rezerváciu na tomto webe – vyberiete službu, deň a čas. Môžete mi aj zavolať.\nAko dlho trvá pedikúra? | Pedikúra (suchá, mokrá aj kombinovaná) trvá približne 60 minút, pedikúra s lakom (Gellak alebo Lak Moyra) asi 90 minút. Trvanie ostatných služieb nájdete v cenníku.\nČo mám priniesť so sebou? | Nič špeciálne. Stačí pohodlná obuv, a ak chcete Gellak alebo Lak Moyra, odtieň si vyberiete u mňa.\nMôžem prísť, ak mám plesňové ochorenie alebo ranky? | Áno, ale prosím upozornite ma vopred pri rezervácii. Pri akútnom zápale, hnisavých alebo nehojacich sa ranách vám odporúčam najskôr navštíviť lekára.\nAko zrušiť alebo zmeniť rezerváciu? | Zavolajte mi alebo napíšte e-mail, najlepšie aspoň 24 hodín vopred, aby som termín mohla ponúknuť ďalším klientom.\nAko platím? | Platba prebieha priamo v salóne po ošetrení. Podrobnosti o platobných možnostiach vám rada poviem telefonicky.", 'pairs'],
   ],
 ],
 
-'O nás' => [
+'O mne' => [
   'Hlavička' => [
-    'about.hero.title' => ['Nadpis stránky', 'O nás', 'text'],
+    'about.hero.title' => ['Nadpis stránky', 'O mne', 'text'],
     'about.hero.lead'  => ['Podtitulok stránky', 'Za každým pekným krokom stojí zdravé a upravené chodidlo.', 'text'],
   ],
-  'Náš príbeh' => [
-    'about.kicker'     => ['Malý nadpis', 'Náš príbeh', 'text'],
+  'Môj príbeh' => [
+    'about.kicker'     => ['Malý nadpis', 'Môj príbeh', 'text'],
     'about.title'      => ['Nadpis', 'Vitajte v PediSalóne ZK', 'text'],
-    'about.body'       => ['Text (odseky oddeľte prázdnym riadkom)', "Náš salón vznikol z jednoduchého presvedčenia: **nohy si zaslúžia rovnakú starostlivosť ako tvár či ruky**. Venujeme sa nielen estetickej pedikúre, ale aj problémom, s ktorými sa ľudia často boja ísť – mozole, kurie oká, zhrubnuté nechty alebo vrastajúci necht.\n\nLogo salóna – chodidlo so srdiečkom a lístkami – vyjadruje naše hodnoty: **láska** k práci, **prírodná** šetrnosť a **precíznosť** v každom detaile.\n\nPracujeme v pokojnom, čistom prostredí. Pri každej návšteve si vyhradíme čas, aby sme sa mohli venovať práve vám.", 'rich'],
+    'about.body'       => ['Text (odseky oddeľte prázdnym riadkom)', "Volám sa **Zdenka Kováčová** a v Handlovej prevádzkujem PediSalón ZK. Venujem sa pedikúre a ošetreniu chodidiel – nielen estetickej, ale aj problémom, s ktorými sa ľudia často boja ísť: mozole, kurie oká, zhrubnuté nechty alebo vrastajúci necht.\n\nSalón vznikol z jednoduchého presvedčenia: **nohy si zaslúžia rovnakú starostlivosť ako tvár či ruky**. Preto sa sústavne vzdelávam – kurzy a školenia, ktoré som absolvovala, nájdete nižšie na tejto stránke.\n\nLogo salóna – chodidlo so srdiečkom a lístkami – vyjadruje to, čo je pre mňa dôležité: **láska** k práci, **šetrnosť** a **precíznosť** v každom detaile.\n\nPracujem v pokojnom, čistom prostredí a pri každej návšteve si vyhradím čas, aby som sa mohla venovať práve vám. Termíny sú po telefonickej dohode alebo cez online rezerváciu.", 'rich'],
     'about.btn'        => ['Tlačidlo', 'Objednať sa', 'text'],
     'about.img'        => ['Vaša fotka pri texte (kým nevyberiete fotku, zobrazuje sa zástupný rámik „Vaša fotka“)', 'majitelka-portret.jpg', 'image'],
   ],
   'Hodnoty' => [
-    'about.values.kicker' => ['Malý nadpis', 'Naše hodnoty', 'text'],
-    'about.values.title'  => ['Nadpis', 'Na čom si zakladáme', 'text'],
-    'about.values'     => ['Hodnoty (jeden riadok = „Nadpis | text“)', "Hygiena | Čisté pomôcky, upratané prostredie a prísne postupy pri každom klientovi.\nEmpatia | Chápeme, že niektoré problémy sú citlivé. U nás sa nemusíte hanbiť.\nŠetrnosť | Jemné postupy a kvalitná kozmetika, ktoré vaše nohy nepodráždia.\nPrecíznosť | Ku každému ošetreniu pristupujeme s pozornosťou k detailom.", 'pairs'],
+    'about.values.kicker' => ['Malý nadpis', 'Moje hodnoty', 'text'],
+    'about.values.title'  => ['Nadpis', 'Na čom si zakladám', 'text'],
+    'about.values'     => ['Hodnoty (jeden riadok = „Nadpis | text“)', "Hygiena | Čisté pomôcky, upratané prostredie a prísne postupy pri každom klientovi.\nEmpatia | Chápem, že niektoré problémy sú citlivé. U mňa sa nemusíte hanbiť.\nŠetrnosť | Jemné postupy a kvalitná kozmetika, ktoré vaše nohy nepodráždia.\nPrecíznosť | Ku každému ošetreniu pristupujem s pozornosťou k detailom.", 'pairs'],
   ],
   'Hygiena a bezpečnosť' => [
     'about.hyg.kicker' => ['Malý nadpis', 'Hygiena a bezpečnosť', 'text'],
     'about.hyg.title'  => ['Nadpis', 'Čisté pracovisko a odborný postup', 'text'],
-    'about.hyg.text'   => ['Text', 'Každé ošetrenie začíname dezinfekciou. Pomôcky po každom klientovi čistíme a dezinfikujeme a pracovisko máme upratané a pripravené pre ďalšieho klienta.', 'area'],
+    'about.hyg.text'   => ['Text', 'Každé ošetrenie začínam dezinfekciou. Pomôcky po každom klientovi čistím a dezinfikujem a pracovisko mám upratané a pripravené pre ďalšieho klienta.', 'area'],
     'about.hyg.ticks'  => ['Odrážky (jeden riadok = jedna odrážka)', "Dezinfekcia pri každom ošetrení\nČisté a dezinfikované pomôcky pre každého klienta\nOdborné vzdelanie a pravidelné školenia – certifikáty nájdete nižšie", 'lines'],
     'about.hyg.img'    => ['Fotka pri texte', 'salon-sterilizacia.jpg', 'image'],
   ],
   'Certifikáty (nadpisy)' => [
     'about.cert.kicker' => ['Malý nadpis', 'Odbornosť', 'text'],
     'about.cert.title'  => ['Nadpis', 'Certifikáty a odborné školenia', 'text'],
-    'about.cert.text'   => ['Text pod nadpisom (samotné certifikáty pridáte v sekcii Certifikáty)', 'O vaše nohy sa staráme s odbornými znalosťami. Sústavne sa vzdelávame a absolvované kurzy a školenia nájdete nižšie. Kliknutím si certifikát zväčšíte.', 'area'],
+    'about.cert.text'   => ['Text pod nadpisom (samotné certifikáty pridáte v sekcii Certifikáty)', 'O vaše nohy sa starám s odbornými znalosťami. Sústavne sa vzdelávam a absolvované kurzy a školenia nájdete nižšie. Kliknutím si certifikát zväčšíte.', 'area'],
   ],
 ],
 
@@ -168,15 +168,15 @@ return [
 ],
 'Prevádzka' => [
   'Hlavička' => [
-    'premises.hero.title' => ['Nadpis stránky', 'Naša prevádzka', 'text'],
+    'premises.hero.title' => ['Nadpis stránky', 'Moja prevádzka', 'text'],
     'premises.hero.lead'  => ['Podtitulok', 'Nahliadnite do salónu ešte pred prvou návštevou – čisté, pokojné a príjemné prostredie.', 'text'],
   ],
   'Úvod a fotky' => [
-    'premises.kicker' => ['Malý nadpis', 'Kde sa o vás staráme', 'text'],
+    'premises.kicker' => ['Malý nadpis', 'Kde sa o vás starám', 'text'],
     'premises.title'  => ['Nadpis', 'Príjemné prostredie, v ktorom sa oddýchnete', 'text'],
-    'premises.body'   => ['Text (odseky oddeľte prázdnym riadkom)', "Náš salón sme zariadili tak, aby ste sa v ňom cítili pohodlne od prvej minúty. Pracujeme v pokojnom a upratanom prostredí, kde máte dostatok súkromia aj času.
+    'premises.body'   => ['Text (odseky oddeľte prázdnym riadkom)', "Salón som zariadila tak, aby ste sa v ňom cítili pohodlne od prvej minúty. Pracujem v pokojnom a upratanom prostredí, kde máte dostatok súkromia aj času.
 
-Každé pracovisko dezinfikujeme a používame čisté pomôcky, aby ste sa mohli uvoľniť a vychutnať si starostlivosť o svoje nohy.", 'rich'],
+Pracovisko dezinfikujem a používam čisté pomôcky, aby ste sa mohli uvoľniť a vychutnať si starostlivosť o svoje nohy.", 'rich'],
     'premises.photos' => ['Fotky prevádzky (kým nevyberiete fotky, zobrazujú sa zástupné rámiky)', "salon-pracovisko-1.jpg
 salon-cakaren.jpg
 salon-pracovisko-2.jpg
@@ -187,25 +187,25 @@ salon-ulica.jpg
 salon-vchod.jpg", 'photos'],
   ],
   'Čo vás čaká' => [
-    'premises.features.title' => ['Nadpis', 'Čo vás u nás čaká', 'text'],
+    'premises.features.title' => ['Nadpis', 'Čo vás čaká', 'text'],
     'premises.features' => ['Výhody (jeden riadok = „Nadpis | text“)', "Čistota a hygiena | Upratané pracovisko a starostlivo pripravené pomôcky pre každého klienta.
 Pokojná atmosféra | Pokojné prostredie bez zhonu, v ktorom si oddýchnete.
 Pohodlie | Príjemné sedenie a dostatok priestoru na úplné uvoľnenie.
-Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľate.", 'pairs'],
-    'premises.visit.title' => ['Kde nás nájdete – nadpis', 'Navštívte nás', 'text'],
-    'premises.visit.text'  => ['Kde nás nájdete – text ({address} = adresa salónu)', 'Nájdete nás na adrese {address}. Pred návštevou sa objednajte online alebo nám zavolajte na {phone}.', 'area'],
-    'premises.visit.btn'   => ['Kde nás nájdete – tlačidlo', 'Zobraziť kontakt a mapu', 'text'],
+Súkromie | Venujem sa vám individuálne, bez pocitu, že sa niekam ponáhľate.", 'pairs'],
+    'premises.visit.title' => ['Kde ma nájdete – nadpis', 'Navštívte ma', 'text'],
+    'premises.visit.text'  => ['Kde ma nájdete – text ({address} = adresa salónu, {floor} = poschodie z Nastavení)', 'Nájdete ma na adrese {address}{floor}. Pracujem po telefonickej dohode, preto sa pred návštevou objednajte online alebo mi zavolajte na {phone}.', 'area'],
+    'premises.visit.btn'   => ['Kde ma nájdete – tlačidlo', 'Zobraziť kontakt a mapu', 'text'],
   ],
 ],
 
 'Služby a cenník' => [
   'Stránka Služby' => [
-    'sluzby.hero.title' => ['Nadpis stránky', 'Naše služby', 'text'],
+    'sluzby.hero.title' => ['Nadpis stránky', 'Moje služby', 'text'],
     'sluzby.hero.lead'  => ['Podtitulok', 'Od estetickej pedikúry po ošetrenie problémových chodidiel – všetko na jednom mieste.', 'text'],
     'sluzby.card.more'  => ['Odkaz na kartách', 'Detail', 'text'],
     'sluzby.help.kicker' => ['Spodná sekcia – malý nadpis', 'Nie ste si istí?', 'text'],
-    'sluzby.help.title'  => ['Spodná sekcia – nadpis', 'Poradíme vám', 'text'],
-    'sluzby.help.text'   => ['Spodná sekcia – text', 'Ak neviete, ktorá služba je pre vás tá pravá, vyberte pri rezervácii kompletnú pedikúru a v poznámke nám napíšte, čo vás trápi. Postup upravíme na mieru.', 'area'],
+    'sluzby.help.title'  => ['Spodná sekcia – nadpis', 'Poradím vám', 'text'],
+    'sluzby.help.text'   => ['Spodná sekcia – text', 'Ak neviete, ktorá služba je pre vás tá pravá, vyberte pri rezervácii kompletnú pedikúru a v poznámke mi napíšte, čo vás trápi. Postup upravím na mieru.', 'area'],
   ],
   'Stránka Cenník' => [
     'cennik.hero.title' => ['Nadpis stránky', 'Cenník', 'text'],
@@ -230,7 +230,7 @@ Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľat
 'Galéria' => [
   'Galéria' => [
     'galeria.hero.title' => ['Nadpis stránky', 'Galéria', 'text'],
-    'galeria.hero.lead'  => ['Podtitulok', 'Pozrite sa na výsledky našej práce. Kliknutím fotku zväčšíte.', 'text'],
+    'galeria.hero.lead'  => ['Podtitulok', 'Pozrite sa na výsledky mojej práce. Kliknutím fotku zväčšíte.', 'text'],
     'galeria.all'        => ['Tlačidlo filtra „všetko“', 'Všetko', 'text'],
   ],
 ],
@@ -238,7 +238,7 @@ Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľat
 'Kontakt' => [
   'Hlavička a údaje' => [
     'kontakt.hero.title' => ['Nadpis stránky', 'Kontakt', 'text'],
-    'kontakt.hero.lead'  => ['Podtitulok', 'Radi vám odpovieme na otázky. Ozvite sa nám alebo sa rovno objednajte online.', 'text'],
+    'kontakt.hero.lead'  => ['Podtitulok', 'Rada vám odpoviem na otázky. Ozvite sa mi alebo sa rovno objednajte online.', 'text'],
     'kontakt.l.phone'    => ['Popis – telefón', 'Telefón', 'text'],
     'kontakt.l.email'    => ['Popis – e-mail', 'E-mail', 'text'],
     'kontakt.l.address'  => ['Popis – adresa', 'Adresa', 'text'],
@@ -247,8 +247,14 @@ Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľat
     'kontakt.closed'     => ['Slovo pre zatvorený deň', 'Zatvorené', 'text'],
     'kontakt.map'        => ['Odkaz pod mapou', 'Otvoriť v Mapách Google →', 'text'],
   ],
+  'Kde ma nájdete' => [
+    'kontakt.where.kicker' => ['Malý nadpis', 'Poloha salóna', 'text'],
+    'kontakt.where.title'  => ['Nadpis', 'Kde ma nájdete', 'text'],
+    'kontakt.where.text'   => ['Text ({address} = adresa, {floor} = poschodie z Nastavení, {phone} = telefón)', 'Salón nájdete na adrese {address}{floor}. Pri chodníku pred budovou je tabuľa s nápisom PEDIKÚRA a menom salóna, podľa nej budovu ľahko spoznáte. Pracujem po telefonickej dohode, preto mi prosím pred návštevou zavolajte na {phone} alebo sa objednajte online.', 'area'],
+    'kontakt.where.img'    => ['Fotka pri texte', 'salon-ulica.jpg', 'image'],
+  ],
   'Kontaktný formulár' => [
-    'kontakt.form.title'   => ['Nadpis formulára', 'Napíšte nám', 'text'],
+    'kontakt.form.title'   => ['Nadpis formulára', 'Napíšte mi', 'text'],
     'kontakt.form.name'    => ['Popis poľa – meno', 'Meno', 'text'],
     'kontakt.form.phone'   => ['Popis poľa – telefón', 'Telefón', 'text'],
     'kontakt.form.email'   => ['Popis poľa – e-mail', 'E-mail', 'text'],
@@ -256,7 +262,7 @@ Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľat
     'kontakt.form.consent' => ['Súhlas – text pred odkazom', 'Súhlasím so spracovaním osobných údajov podľa', 'text'],
     'kontakt.form.consentlink' => ['Súhlas – text odkazu', 'zásad ochrany údajov', 'text'],
     'kontakt.form.btn'     => ['Tlačidlo odoslať', 'Odoslať správu', 'text'],
-    'kontakt.form.ok'      => ['Hláška po odoslaní', 'Ďakujeme, správu sme prijali. Ozveme sa vám čo najskôr.', 'text'],
+    'kontakt.form.ok'      => ['Hláška po odoslaní', 'Ďakujem, správu som prijala. Ozvem sa vám čo najskôr.', 'text'],
   ],
 ],
 
@@ -291,10 +297,10 @@ Súkromie | Venujeme sa vám individuálne, bez pocitu, že sa niekam ponáhľat
     'rez.sum.price'   => ['Zhrnutie – cena', 'Cena od', 'text'],
     'rez.sum.unset'   => ['Zhrnutie – zatiaľ nevybraté', 'Zatiaľ nevybraté', 'text'],
     'rez.sum.note'    => ['Zhrnutie – poznámka dole', 'Platba prebieha v salóne. Rezerváciu môžete zrušiť telefonicky na **{phone}**.', 'area'],
-    'rez.done.title'  => ['Po odoslaní – nadpis', 'Ďakujeme, rezervácia prijatá!', 'text'],
+    'rez.done.title'  => ['Po odoslaní – nadpis', 'Ďakujem, rezervácia prijatá!', 'text'],
     'rez.done.confirmed' => ['Po odoslaní – ak je termín potvrdený hneď', 'Váš termín je potvrdený.', 'text'],
-    'rez.done.pending'   => ['Po odoslaní – ak čaká na potvrdenie', 'Váš termín sme zaevidovali. Čoskoro vám ho potvrdíme telefonicky alebo e-mailom.', 'text'],
-    'rez.done.note'   => ['Po odoslaní – poznámka dole ({phone} = telefón salónu)', 'V prípade zmeny nás prosím kontaktujte na {phone}.', 'text'],
+    'rez.done.pending'   => ['Po odoslaní – ak čaká na potvrdenie', 'Váš termín som zaevidovala. Čoskoro vám ho potvrdím telefonicky alebo e-mailom.', 'text'],
+    'rez.done.note'   => ['Po odoslaní – poznámka dole ({phone} = telefón salónu)', 'V prípade zmeny ma prosím kontaktujte na {phone}.', 'text'],
     'rez.done.btn'    => ['Po odoslaní – tlačidlo', 'Späť na úvod', 'text'],
   ],
 ],

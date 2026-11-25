@@ -81,8 +81,8 @@ $ogImage = $baseUrl . '/assets/img/og-image.jpg';
 <link rel="icon" href="assets/img/logo-square.png">
 <!-- Písma sú uložené na vlastnom serveri (nič sa nenačítava z Google) -->
 <link rel="preload" href="assets/fonts/manrope-normal-800-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/fonts.css?v=1">
-<link rel="stylesheet" href="assets/css/style.css?v=34">
+<link rel="stylesheet" href="assets/css/fonts.css?v=2">
+<link rel="stylesheet" href="assets/css/style.css?v=36">
 <script type="application/ld+json">
 <?= json_encode([
     '@context' => 'https://schema.org', '@type' => 'HealthAndBeautyBusiness',

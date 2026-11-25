@@ -43,7 +43,7 @@ if (empty($_SESSION['ok'])) {
     }
     ?><!DOCTYPE html><html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>Administrácia | <?= e($C['salon']['name']) ?></title>
-<link rel="stylesheet" href="../assets/css/style.css?v=14"><link rel="stylesheet" href="../assets/css/fonts.css?v=1"></head>
+<link rel="stylesheet" href="../assets/css/style.css?v=14"><link rel="stylesheet" href="../assets/css/fonts.css?v=2"></head>
 <body class="admin-body"><form method="post" class="login-box">
 <img src="../assets/img/logo.png" alt=""><h1 style="font-size:2rem">Administrácia</h1>
 <?php if ($err): ?><div class="alert bad"><?= e($err) ?></div><?php endif; ?>
@@ -63,7 +63,7 @@ function admin_head(string $title, string $active, string $badge = '', string $i
 <html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title><?= e($title) ?> | <?= e($C['salon']['name']) ?></title>
 <link rel="stylesheet" href="../assets/css/style.css?v=14">
-<link rel="stylesheet" href="../assets/css/fonts.css?v=1"></head>
+<link rel="stylesheet" href="../assets/css/fonts.css?v=2"></head>
 <body class="admin-body">
 <div class="admin-wrap">
   <div class="admin-top">

@@ -148,7 +148,7 @@
       msg.className = 'alert bad'; msg.textContent = j.error || 'Rezerváciu sa nepodarilo uložiť.';
       if (j.fields) Object.entries(j.fields).forEach(([k, v]) => setErr(k, v));
       if (j.conflict) { cache = {}; setTimeout(() => loadSlots(), 1600); }
-    } catch (err) { msg.className = 'alert bad'; msg.textContent = 'Chyba spojenia. Skúste to prosím znova alebo nám zavolajte na ' + cfg.phone + '.'; }
+    } catch (err) { msg.className = 'alert bad'; msg.textContent = 'Chyba spojenia. Skúste to prosím znova alebo mi zavolajte na ' + cfg.phone + '.'; }
     btn.disabled = false;
   });
 

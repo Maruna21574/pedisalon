@@ -77,7 +77,7 @@ $rest = array_slice($photos, 2);
     </div>
     <div class="reveal left">
       <ul class="info-list visit-card">
-        <li><span class="ic"><?= icon('pin') ?></span><div><b><?= t('kontakt.l.address') ?></b><?= e($S['address']) ?></div></li>
+        <li><span class="ic"><?= icon('pin') ?></span><div><b><?= t('kontakt.l.address') ?></b><?= e($S['address']) ?><?php if (!empty($S['location_note'])): ?><br><span style="color:var(--muted)"><?= e($S['location_note']) ?></span><?php endif; ?></div></li>
         <li><span class="ic"><?= icon('phone') ?></span><div><b><?= t('kontakt.l.phone') ?></b><a href="tel:<?= e($S['phone_raw']) ?>"><?= e($S['phone']) ?></a></div></li>
         <li><span class="ic"><?= icon('clock') ?></span><div><b><?= t('kontakt.l.hours') ?></b><?= hours_summary() ?></div></li>
       </ul>

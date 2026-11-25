@@ -59,7 +59,7 @@ $result = store_mutate(BOOKINGS_FILE, function (array $all) use ($date, $time, $
     return ['data' => $all, 'return' => true];
 });
 
-if ($result === 'limit') json_out(['error' => 'Na toto telefónne číslo už existuje viac aktívnych rezervácií. Zavolajte nám prosím.'], 429);
+if ($result === 'limit') json_out(['error' => 'Na toto telefónne číslo už existuje viac aktívnych rezervácií. Zavolajte mi prosím.'], 429);
 if ($result !== true) json_out(['error' => 'Tento termín už bol medzitým obsadený. Vyberte prosím iný čas.', 'conflict' => true], 409);
 
 // Notifikácie (HTML e-maily: majiteľke aj klientovi)

@@ -1,7 +1,7 @@
 <?php
 $active = 'onas';
-$title = 'O nás';
-$desc = 'Spoznajte PediSalón ZK – salón pedikúry a ošetrenia chodidiel. Šetrný prístup, hygiena a starostlivosť o každého klienta.';
+$title = 'O mne';
+$desc = 'Spoznajte Zdenku Kováčovú a PediSalón ZK v Handlovej – pedikúra a ošetrenie chodidiel, odborné vzdelanie, hygiena a šetrný prístup ku každému klientovi.';
 require __DIR__ . '/inc/header.php';
 ?>
 <section class="page-hero">

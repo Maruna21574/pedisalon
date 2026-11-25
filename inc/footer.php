@@ -77,7 +77,7 @@
 </div>
 <script src="assets/js/consent.js?v=1" defer></script>
 <script src="assets/js/hero.js?v=3" defer></script>
-<script src="assets/js/main.js?v=4" defer></script>
+<script src="assets/js/main.js?v=5" defer></script>
 <?php if (!empty($extraJs)) foreach ($extraJs as $js): ?>
 <script src="<?= e($js) ?>" defer></script>
 <?php endforeach; ?>

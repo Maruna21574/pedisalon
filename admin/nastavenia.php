@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($errs) { flash(implode(' ', $errs), 'bad'); redirect('nastavenia.php'); }
         $salon = ['name' => $f('name'), 'tagline' => $f('tagline'), 'phone' => $f('phone'), 'phone_raw' => preg_replace('/[^\d+]/', '', $f('phone')),
                   'email' => $f('email'), 'address' => $f('address'), 'city' => $f('city'), 'facebook' => $f('facebook'), 'instagram' => $f('instagram'),
-                  'maps_embed' => $maps, 'ico' => $f('ico')];
+                  'maps_embed' => $maps, 'ico' => $f('ico'), 'location_note' => $f('location_note')];
         settings_update(function (array $s) use ($salon) { $s['salon'] = $salon; return $s; });
         flash('Údaje salónu uložené.');
     } elseif ($a === 'hours') {
@@ -76,6 +76,7 @@ admin_head('Nastavenia', 'nastavenia');
       <div class="field"><label>Telefón</label><input name="salon[phone]" value="<?= e($S['phone']) ?>"></div>
       <div class="field"><label>E-mail (sem chodia rezervácie a správy)</label><input type="email" name="salon[email]" value="<?= e($S['email']) ?>"></div>
       <div class="field"><label>Adresa</label><input name="salon[address]" value="<?= e($S['address']) ?>"></div>
+      <div class="field"><label>Upresnenie polohy (poschodie, vchod…)</label><input name="salon[location_note]" value="<?= e($S['location_note'] ?? '') ?>" placeholder="napr. 1. poschodie"><small class="help">Zobrazí sa pri adrese v Kontakte a v Prevádzke.</small></div>
       <div class="field"><label>Mesto</label><input name="salon[city]" value="<?= e($S['city']) ?>"></div>
       <div class="field"><label>Facebook (odkaz)</label><input name="salon[facebook]" value="<?= e($S['facebook']) ?>"></div>
       <div class="field"><label>Instagram (odkaz)</label><input name="salon[instagram]" value="<?= e($S['instagram']) ?>"></div>

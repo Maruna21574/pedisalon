@@ -15,7 +15,7 @@ return [
         'intro' => 'Ide o plesňovú infekciu, ktorá zafarbuje a zhrubuje nechty alebo postihuje kožu medzi prstami a na chodidle. Je to veľmi časté a bez ošetrenia sa pomaly šíri.',
         'causes' => ['Vlhké a teplé prostredie – dlhé nosenie uzavretej obuvi, potenie nôh', 'Chodenie naboso na verejných miestach: bazény, sauny, sprchy, telocvične', 'Požičiavanie obuvi, uterákov alebo pomôcok na pedikúru', 'Poranenie nechta alebo kože, cez ktoré plesne ľahšie vniknú', 'Oslabená imunita, cukrovka, poruchy prekrvenia', 'Neúplné vyliečenie predchádzajúcej infekcie'],
         'signs' => ['Necht žltne, belie, hnedne alebo sa zakaľuje', 'Zhrubnutý, drobivý alebo odlupujúci sa necht', 'Šúpanie, svrbenie a praskliny medzi prstami', 'Nepríjemný zápach'],
-        'help' => 'Odborné ošetrenie nechtov – opatrné zbrúsenie zhrubnutej platničky a poradenstvo k domácej starostlivosti. Na samotnú liečbu plesne odporúčame lekára alebo lekárnika, protiplesňové prípravky vám predpíše alebo odporučí lekár či lekárnik.',
+        'help' => 'Odborné ošetrenie nechtov – opatrné zbrúsenie zhrubnutej platničky a poradenstvo k domácej starostlivosti. Na samotnú liečbu plesne odporúčam lekára alebo lekárnika, ktorý vám protiplesňové prípravky predpíše alebo odporučí.',
         'link' => ['mykoza.php', 'Ošetrenie nechtov'],
         'doctor' => 'Mykózu nie je možné vyliečiť len pedikúrou. Pri podozrení na plesňovú infekciu sa poraďte s lekárom (dermatológom).',
     ],

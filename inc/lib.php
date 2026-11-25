@@ -241,7 +241,7 @@ function tx(string $key): string {
     $reg = texts_registry();
     $v = (isset($ov[$key]) && trim((string)$ov[$key]) !== '') ? (string)$ov[$key] : (string)($reg[$key][1] ?? '');
     $S = cfg()['salon'];
-    return strtr($v, ['{name}' => $S['name'], '{phone}' => $S['phone'], '{email}' => $S['email'], '{address}' => $S['address'], '{ico}' => $S['ico'] ?? '']);
+    return strtr($v, ['{name}' => $S['name'], '{phone}' => $S['phone'], '{email}' => $S['email'], '{address}' => $S['address'], '{ico}' => $S['ico'] ?? '', '{floor}' => !empty($S['location_note']) ? ', ' . $S['location_note'] : '']);
 }
 /** **tučné** → <b>, *kurzíva* → <em>, všetko ostatné je escapované. */
 function fmt(string $s): string {

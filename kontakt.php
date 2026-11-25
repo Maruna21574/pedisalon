@@ -20,7 +20,7 @@ $today = (int)date('N');
       <ul class="info-list">
         <li><span class="ic"><?= icon('phone') ?></span><div><b><?= t('kontakt.l.phone') ?></b><a href="tel:<?= e($S['phone_raw']) ?>"><?= e($S['phone']) ?></a></div></li>
         <li><span class="ic"><?= icon('mail') ?></span><div><b><?= t('kontakt.l.email') ?></b><a href="mailto:<?= e($S['email']) ?>"><?= e($S['email']) ?></a></div></li>
-        <li><span class="ic"><?= icon('pin') ?></span><div><b><?= t('kontakt.l.address') ?></b><?= e($S['address']) ?></div></li>
+        <li><span class="ic"><?= icon('pin') ?></span><div><b><?= t('kontakt.l.address') ?></b><?= e($S['address']) ?><?php if (!empty($S['location_note'])): ?><br><span style="color:var(--muted)"><?= e($S['location_note']) ?></span><?php endif; ?></div></li>
         <li><span class="ic"><?= icon('clock') ?></span><div style="flex:1"><b><?= t('kontakt.l.hours') ?></b>
           <?php if (!empty($C['hours_by_appointment'])): ?><div><?= e(tx('hours.by_appointment')) ?></div><?php else: ?>
           <table class="hours-table">
@@ -44,6 +44,17 @@ $today = (int)date('N');
         <label class="check"><input type="checkbox" name="consent" value="1" required> <span><?= t('kontakt.form.consent') ?> <a href="ochrana-udajov.php" target="_blank"><?= t('kontakt.form.consentlink') ?></a>.</span></label>
         <button class="btn btn-lg" type="submit"><?= t('kontakt.form.btn') ?> <?= icon('arrow') ?></button>
       </form>
+    </div>
+  </div>
+  <div class="wrap split" style="margin-top:60px">
+    <div class="reveal left">
+      <span class="kicker"><?= t('kontakt.where.kicker') ?></span>
+      <h2><?= t('kontakt.where.title') ?></h2>
+      <p><?= t('kontakt.where.text') ?></p>
+      <p><a href="tel:<?= e($S['phone_raw']) ?>" class="btn"><?= icon('phone') ?> <?= e($S['phone']) ?></a></p>
+    </div>
+    <div class="split-media reveal right">
+      <div class="img-main" style="aspect-ratio:4/3;transform:none"><img src="<?= e(timg('kontakt.where.img')) ?>" alt="<?= e(tx('kontakt.where.title')) ?>" loading="lazy" decoding="async"></div>
     </div>
   </div>
   <div class="wrap" style="margin-top:44px">

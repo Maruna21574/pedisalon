@@ -17,6 +17,7 @@ return [
         'email'     => 'info@pedisalonzk.sk',      // sem chodia upozornenia o rezerváciách
         'address'   => 'Nám. baníkov 2, 972 51 Handlová',
         'city'      => 'Handlová',
+        'location_note' => '1. poschodie',   // upresnenie polohy (poschodie, vchod…) – zobrazí sa pri adrese
         'facebook'  => 'https://www.facebook.com/972049906001172/',
         'instagram' => 'https://www.instagram.com/pedisalonzk/',
         'url'       => '',   // adresa webu pre náhľad pri zdieľaní; prázdne = zistí sa z aktuálnej domény (napr. https://pedisalonzk.sk)
