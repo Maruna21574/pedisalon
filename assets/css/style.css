@@ -825,3 +825,5 @@ body:not(.admin-body) .brand-text{font-family:var(--font-display)}
   .sec-head{margin-bottom:34px}
 }
 @media (max-width:900px){.medal{width:24%;left:-4px;bottom:-12px;border-width:4px}}
+/* Mobil: na stránke O mne je fotka pod textom */
+@media (max-width:900px){.split.rev .split-media{order:2}}
