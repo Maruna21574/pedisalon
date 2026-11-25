@@ -311,7 +311,7 @@ Súkromie | Venujem sa vám individuálne, bez pocitu, že sa niekam ponáhľate
   ],
   'Stránka „nenájdené“ (404)' => [
     'e404.title' => ['Titulok v karte prehliadača', 'Stránka sa nenašla', 'text'],
-    'e404.text'  => ['Text', 'Táto stránka sa stratila ako ponožka v práčke. Vráťte sa na úvod alebo sa objednajte.', 'area'],
+    'e404.text'  => ['Text', 'Stránka, ktorú hľadáte, neexistuje alebo bola presunutá. Vráťte sa prosím na úvodnú stránku alebo si vyberte termín v online rezervácii.', 'area'],
     'e404.btn1'  => ['Tlačidlo 1', 'Na úvodnú stránku', 'text'],
     'e404.btn2'  => ['Tlačidlo 2', 'Rezervácia', 'text'],
   ],

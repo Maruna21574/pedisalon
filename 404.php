@@ -5,7 +5,7 @@ $active = '';
 $title = tx('e404.title');
 require __DIR__ . '/inc/header.php';
 ?>
-<section class="page-hero" style="min-height:80vh;display:grid;place-items:center">
+<section class="page-hero" style="min-height:60vh;display:grid;place-items:center">
   <div class="wrap">
     <h1 style="font-size:clamp(5rem,16vw,10rem);color:var(--rose-500)">404</h1>
     <p><?= t('e404.text') ?></p>
