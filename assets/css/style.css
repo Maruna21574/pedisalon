@@ -777,3 +777,10 @@ section{position:relative}
 .cookie-bar{left:16px;right:auto;bottom:16px;margin-inline:0;width:min(420px,calc(100vw - 32px));max-width:420px;padding:18px 20px}
 .cookie-bar p{font-size:.88rem}
 @media (max-width:560px){.cookie-bar{width:auto;right:12px;left:12px;bottom:12px}}
+
+/* Mobil: nič nesmie presahovať šírku obrazovky (animácie vstupu zo strán sú na malých displejoch len zvislé) */
+html,body{overflow-x:clip;max-width:100%}
+@media (max-width:900px){
+  .reveal.left,.reveal.right{transform:translateY(30px)}
+  .reveal.in{transform:none}
+}
