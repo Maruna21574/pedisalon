@@ -7,7 +7,6 @@ require __DIR__ . '/inc/header.php';
   <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <span class="eyebrow reveal"><?= icon('leaf') ?> <?= t('home.eyebrow') ?></span>
       <h1 class="reveal" style="--d:.1s"><?= t('home.h1') ?><span class="script"><?= t('home.h1script') ?></span></h1>
       <p class="lead reveal" style="--d:.2s"><?= t('home.lead') ?></p>
       <div class="hero-actions reveal" style="--d:.3s">
@@ -23,7 +22,6 @@ require __DIR__ . '/inc/header.php';
           <svg viewBox="0 0 200 200" class="ring-text" aria-hidden="true"><defs><path id="circ" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs><text><textPath href="#circ"><?= e($S['name']) ?> ✿ pedikúra ✿ starostlivosť ✿ </textPath></text></svg>
           <img src="assets/img/logo.png" alt="Logo <?= e($S['name']) ?>">
         </div>
-        <div class="chip c1" style="--z:130px"><?= icon('clock') ?> <?= t('home.chip1') ?></div>
       </div>
     </div>
   </div>
