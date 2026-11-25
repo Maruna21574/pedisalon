@@ -12,6 +12,7 @@ return [
     'intro'  => [
         'Pravidelná pedikúra nie je len o estetike. Správne upravené nechty, uvoľnená koža a ošetrené päty predchádzajú nepríjemným problémom a nohy sa vám poďakujú pohodlím.',
         'Pri každej návšteve si najprv prezriem stav vašich chodidiel a podľa toho zvolím postup. Na záver môžete nechty nechať prirodzené alebo si vybrať farbu – klasický lak či trvanlivý gél lak.',
+        'Na výber máte tri druhy pedikúry: suchú (prístrojovú), pri ktorej zhrubnutú kožu ošetrím frézkou, mokrú (skalpelovú) po vodnom kúpeli a kombinovanú, ktorá spája frézku so skalpelom. Všetky trvajú približne 60 minút.',
     ],
     'includes' => ['Dezinfekcia', 'Ošetrenie zhrubnutej kože frézkou alebo skalpelom', 'Úprava nechtov', 'Krém na chodidlá', 'Voliteľne lakovanie – Gellak alebo Lak Moyra, olejček', 'Relaxačný kúpeľ, peeling a maska (samostatne)'],
     'steps' => [['Konzultácia', 'Prezriem nohy a dohodneme očakávania.'], ['Úprava', 'Nechty, kutikuly a zrohovatená koža.'], ['Starostlivosť', 'Hydratácia a relaxačná masáž.'], ['Finálny vzhľad', 'Lak alebo gél lak podľa výberu.']],
@@ -89,6 +90,29 @@ return [
         ['Ako dlho špona vydrží?', 'Podľa tvaru nechta a rýchlosti rastu zvyčajne niekoľko týždňov. Pravidelne ju kontrolujem a dolepujem.'],
         ['Môžem po aplikácii chodiť normálne?', 'Áno, špona je tenká a pohodlná. Bežné aktivity ani nosenie topánok nebýva problém.'],
         ['Je špona vhodná pre každého?', 'Nie vždy. Pri silne zapálenom alebo hnisavom stave odporúčam lekára. Vhodnosť posúdim pri konzultácii.'],
+    ],
+],
+
+'svc:reflexna-masaz' => [
+    'active' => 'sluzby',
+    'title'  => 'Reflexná masáž chodidiel',
+    'desc'   => 'Reflexná masáž chodidiel (30 minút) v PediSalóne ZK v Handlovej. Uvoľnenie a relax pre unavené nohy. Cena a online rezervácia.',
+    'h1'     => 'Reflexná masáž chodidiel',
+    'lead'   => 'Uvoľňujúca masáž chodidiel tlakom na reflexné body – 30 minút oddychu pre unavené nohy.',
+    'services' => ['reflexna-masaz'],
+    'intro'  => [
+        'Reflexná masáž chodidiel je masáž, pri ktorej sa tlakom a trením pôsobí na reflexné body a zóny na chodidle. Je príjemným spôsobom, ako uvoľniť unavené nohy a načerpať pokoj.',
+        'Masáž trvá približne 30 minút. Môžete si ju objednať samostatne alebo ako doplnok k pedikúre.',
+    ],
+    'includes' => ['Krátka konzultácia pred masážou', 'Masáž chodidiel tlakom na reflexné body', 'Uvoľnenie a prekrvenie chodidla', 'Relaxačný záver masáže', 'Odporúčania pre starostlivosť o nohy doma'],
+    'steps' => [['Konzultácia', 'Povedzte mi, čo vás trápi, a dohodneme postup.'], ['Príprava', 'Pripravím chodidlá a pohodlné prostredie.'], ['Masáž', 'Postupne masírujem reflexné zóny chodidla.'], ['Záver', 'Na záver dostanete tipy, ako nohy uvoľniť aj doma.']],
+    'tips' => ['Po masáži vypite dostatok vody.', 'Po masáži si doprajte pokoj a pohodlnú obuv.', 'Pri akútnych ťažkostiach, zápale alebo rane na chodidle sa najskôr poraďte s lekárom.'],
+    'note'  => 'Reflexná masáž je relaxačná služba. Nenahrádza lekárske vyšetrenie ani liečbu. Pri ochoreniach, tehotenstve, kŕčových žilách alebo zápale vopred, prosím, informujte o tom pri rezervácii.',
+    'photos' => [],
+    'faq' => [
+        ['Ako dlho masáž trvá?', 'Približne 30 minút.'],
+        ['Môžem masáž kombinovať s pedikúrou?', 'Áno. Pri rezervácii môžete vybrať masáž aj pedikúru a termíny si dohodneme tak, aby na seba nadväzovali.'],
+        ['Je masáž vhodná pre každého?', 'Nie vždy. Ak máte zdravotné ťažkosti na nohách (zápal, rana, trombóza), poraďte sa najskôr s lekárom a upozornite ma pri rezervácii.'],
     ],
 ],
 

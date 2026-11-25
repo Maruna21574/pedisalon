@@ -141,7 +141,7 @@ return [
         'reflexna-masaz' => [
             'category' => 'Relax a masáž',
             'name'     => 'Reflexná masáž chodidiel',
-            'short'    => 'Reflexná masáž chodidiel, 30 minút.',
+            'short'    => 'Uvoľňujúca reflexná masáž chodidiel, 30 minút.',
             'duration' => 30,
             'price'    => 20,
             'page'     => 'sluzba.php?id=reflexna-masaz',
