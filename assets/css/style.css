@@ -479,7 +479,7 @@ section{position:relative}
 .success .box{display:inline-block;text-align:left;background:var(--sage-50);border-radius:var(--radius-sm);padding:18px 26px;margin:18px 0}
 .confetti{position:fixed;top:-20px;width:10px;height:14px;z-index:500;pointer-events:none;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
-@media (max-width:980px){.booking{grid-template-columns:1fr}.bk-summary{position:static;order:-1}.stepper li{font-size:0;padding-top:40px}}
+@media (max-width:980px){.booking{grid-template-columns:1fr}.bk-summary{position:static;order:2}.stepper li{font-size:0;padding-top:40px}}
 @media (max-width:560px){.bk-main{padding:22px 16px}.svc-opt{grid-template-columns:52px 1fr}.svc-opt .p{grid-column:2}.svc-opt img{width:52px;height:52px}}
 
 /* ---------- CTA, pätička ---------- */
